@@ -48,10 +48,10 @@
 }
 
 .contentCenter {
-  justify-content: flex-start !important;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
+  justify-content: flex-start !important;
 }
 
 /* ****Dashboard Home page**** */

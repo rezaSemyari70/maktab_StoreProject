@@ -48,8 +48,8 @@
 }
 
 .contentCenter {
-    justify-content: flex-start !important;
     @include contentFlex();
+    justify-content: flex-start !important;
 }
 
 /* ****Dashboard Home page**** */

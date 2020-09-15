@@ -3,7 +3,7 @@ import React from 'react'
 function DefaulFooter() {
     return (
         <div className="mt-4">
-            Footer site
+            {/* Footer site */}
         </div>
     )
 }

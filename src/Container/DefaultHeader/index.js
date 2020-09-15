@@ -3,6 +3,7 @@ import {Row, Col, Container, Input} from 'reactstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faBars, faSearch, faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 import './Header.scss';
+import CategoryProducts from '../../Views/CategoryProducts/CategoryProducts';
 
 const DefaultHeader = () => {
 
@@ -69,16 +70,17 @@ const DefaultHeader = () => {
                         </Col>
                     </Row>
                     <Row className="d-none d-md-flex mt-4">
-                        <Col xs={8}>
-                            <Row>
+                        <Col className="p-0">
+                            <CategoryProducts/>
+                            {/* <Row>
                                 <Col>Column</Col>
                                 <Col>Column</Col>
                                 <Col>Column</Col>
                                 <Col>Column</Col>
                                 <Col>Column</Col>
-                            </Row>
+                            </Row> */}
                         </Col>
-                        <Col></Col>
+                        {/* <Col></Col> */}
                     </Row>
                 </Col>
             </Row>
