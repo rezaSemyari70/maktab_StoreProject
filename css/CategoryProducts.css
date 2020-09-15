@@ -30,17 +30,18 @@ body {
 }
 
 .dropdown .dropbtn {
+  border-bottom: 2px solid black !important;
   font-size: 16px;
   border: none;
   outline: none;
   padding-left: 10px;
   background-color: inherit;
   font: inherit;
-  margin: 0;
-  margin-right: 10px;
+  margin: 0 10px 0 0;
 }
 
-.dropdown:hover .dropdown-content, .dropbtn:hover .dropdown-content {
+.dropbtn:hover .dropdown-content,
+.dropdown:hover .dropdown-content {
   display: flex !important;
   transition: width 1s !important;
 }
@@ -82,7 +83,7 @@ body {
   font-size: 12px !important;
   width: 220px !important;
   height: 30px !important;
-  background-color: #f0bdbd;
+  background-color: #d8d8d8;
 }
 
 .list {

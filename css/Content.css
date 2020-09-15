@@ -1,0 +1,36 @@
+.carouselBox {
+  width: auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border-radius: 15px !important;
+}
+
+.carousel-item img {
+  max-width: 100vw !important;
+  max-height: 500px !important;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  background-color: rgba(156, 156, 156, 0.63) !important;
+  height: 40px !important;
+  width: 40px !important;
+  bottom: 45% !important;
+  top: 45% !important;
+}
+
+.se-only {
+  background-color: saddlebrown !important;
+}
+
+.carousel-control-next-icon {
+  color: red !important;
+}
+
+.carousel-caption {
+  background-color: rgba(199, 199, 199, 0.87);
+  max-width: 70vw !important;
+  right: 15% !important;
+}
+/*# sourceMappingURL=Content.css.map */

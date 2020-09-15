@@ -13,8 +13,9 @@ function CategoryProducts() {
         setPending] = useState(true);
 
     useEffect(() => {
-        api
-            .get("products/categories")
+        api.get("products/categories", {
+            per_page: 10, // 20 products per page
+          })
             .then(res => {
                 setCategories(res.data);
                 console.log(res.data);
