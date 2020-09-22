@@ -23,3 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 /css/App.css.map
 /css/Header.css.map
+/mystore/css/Content.css.map
+/mystore/css/CategoryProducts.css.map
