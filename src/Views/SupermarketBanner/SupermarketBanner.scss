@@ -1,0 +1,25 @@
+.contentSupermarketBanner{
+    max-height : 400px !important;
+    min-height:280px !important;
+    border-radius: 20px
+}
+
+.supermarketBannerPic{
+   background-image: url('../../assets/images/supermarketBanner.png');
+   background-repeat: no-repeat;
+   width:400px !important;
+   height:250px !important;
+    
+}
+
+.lableOffSupermarket{
+    width:200px ;
+    height: 80px ;
+    border-radius: 25px 75px 26px 75px;
+    background-color: red;
+}
+
+.titleSupermarketBanner{
+    font-size:40px !important;
+}
+

@@ -49,7 +49,6 @@ function CategoryProducts() {
                             </Row>
                         </div>
                     </div>
-                
             </div>
         </div>
     )

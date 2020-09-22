@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,oBAAoB,CAAA;EAChB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,aAAa,EAAE,IAAI;CACtB",
+    "sources": [
+        "../src/Views/SupermarketBanner/SupermarketBanner.scss"
+    ],
+    "names": [],
+    "file": "SupermarketBanner.css"
+}
