@@ -1,0 +1,79 @@
+.owl-carousel {
+  height: auto !important;
+}
+
+.specialProductCard {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 25vw !important;
+  height: 100% !important;
+  border: none !important;
+  border-radius: 6px !important;
+  min-height: 300px !important;
+  min-width: 160px !important;
+  max-width: 220px !important;
+}
+
+.specialboxBanner {
+  width: 400px !important;
+  height: 200px !important;
+  margin-right: 20px !important;
+  padding-left: 10px !important;
+}
+
+.containerOwlCarousel {
+  max-width: 65%;
+}
+
+@media (min-width: 576px) {
+  .containerOwlCarousel {
+    max-width: 80%;
+  }
+}
+
+.imageBanner {
+  margin-right: 20px !important;
+  width: 100px !important;
+}
+
+.title {
+  margin-bottom: 20px !important;
+  padding: 20px !important;
+}
+
+.img-i {
+  width: 92% !important;
+  height: auto !important;
+  border: none !important;
+  margin-bottom: 20px !important;
+}
+
+.owl-prev {
+  left: 0 !important;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  color: black !important;
+  background-color: rgba(161, 161, 161, 0.274) !important;
+  width: 50px !important;
+  height: 50px !important;
+  border: none !important;
+  border-radius: 100% !important;
+  outline: none !important;
+}
+
+.owl-next {
+  right: 0 !important;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  color: black !important;
+  background-color: rgba(161, 161, 161, 0.274) !important;
+  width: 50px !important;
+  height: 50px !important;
+  border: none !important;
+  border-radius: 100% !important;
+  outline: none !important;
+}
+/*# sourceMappingURL=AllCategoriesHome.css.map */

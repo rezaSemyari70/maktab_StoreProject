@@ -1,4 +1,5 @@
 import React from 'react';
+import AllCategoriesHome from '../../Views/AllCategoriesHome/CategoriesSlider';
 // import {Row , Container} from 'reactstrap';
 import HomeSlider from '../../Views/HomeSlider/HomeSlider';
 import SpecialProductSlider from '../../Views/SpecialProductSlider/SpecialProductSlider';
@@ -16,6 +17,7 @@ const DefaultContent = (props) => {
         <HomeSlider/>
           <SpecialProductSlider/>
         <SupermarketBanner/>
+        <AllCategoriesHome/>
       </div>
     );
 }
