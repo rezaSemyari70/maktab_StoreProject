@@ -1,0 +1,46 @@
+.footerContent {
+    height: 260px !important;
+}
+
+.backgroundFooter {
+    background-color: #e4e4e4 !important;
+}
+
+.topFooter {
+    height: 100px !important;
+    background-color: #d1d1d1 !important;
+    
+    .itemTopFooter {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}
+
+.iconTopFooter {
+    width: 70px !important;
+    height: 70px !important;
+}
+
+.headerListItem {
+    background-color: rgb(197, 197, 197) !important;
+}
+
+.abouteStore {
+    border-bottom: 2px solid #b6b6b6 !important;
+}
+
+.inputSendEmail {
+    max-width: 330px !important;
+    border-radius: 0 10px 20px 0 !important;
+}
+
+.sendEmailBtn {
+    border-radius: 20px 0 0 10px !important;
+    font-weight: bold !important;
+}
+
+.socialIconsFooter {
+    width: 60px !important;
+    height: 60px !important;
+}
