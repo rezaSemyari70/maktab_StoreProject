@@ -1,12 +1,5 @@
 import React, {useState} from 'react';
-import {
-    Carousel,
-    CarouselItem,
-    CarouselControl,
-    CarouselIndicators,
-    CarouselCaption,
-    Row,
-    Col
+import {Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption, Row, Col
 } from 'reactstrap';
 
 import './HomeSlider.scss';

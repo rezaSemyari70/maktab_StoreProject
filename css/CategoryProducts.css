@@ -24,13 +24,16 @@ body {
   text-decoration: none;
 }
 
+.iconHome {
+  cursor: pointer;
+}
+
 .dropdown {
   float: left;
   transition: width 0.5s;
 }
 
 .dropdown .dropbtn {
-  border-bottom: 2px solid black !important;
   font-size: 16px;
   border: none;
   outline: none;
@@ -40,7 +43,6 @@ body {
   margin: 0 10px 0 0;
 }
 
-.dropbtn:hover .dropdown-content,
 .dropdown:hover .dropdown-content {
   display: flex !important;
   transition: width 1s !important;

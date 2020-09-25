@@ -1,0 +1,34 @@
+.categoryPicBox {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  height: 50px !important;
+}
+
+.titleCategory {
+  font-size: 1rem !important;
+}
+
+.categoryPic {
+  width: auto !important;
+  height: 70% !important;
+  margin-left: 10px !important;
+}
+
+.categoryPic-health {
+  height: 100% !important;
+  width: auto !important;
+}
+
+.categoryPic-digital {
+  height: 20% !important;
+  width: auto !important;
+  margin-left: 10px !important;
+}
+
+.categoryPic-chair {
+  height: 40% !important;
+  width: auto !important;
+  margin-left: 10px !important;
+}
+/*# sourceMappingURL=ContentAllCategoriesPage.css.map */

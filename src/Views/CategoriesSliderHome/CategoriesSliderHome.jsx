@@ -2,8 +2,8 @@ import React from 'react';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import './CategoriesSlider.scss';
-import {Card, Col, Row} from 'reactstrap';
+import './CategoriesSliderHome.scss';
+import {Col, Row} from 'reactstrap';
 import iconCoat from '../../assets/images/icon-coat.svg';
 import iconBasketFood from '../../assets/images/icon-basketFood.svg';
 import iconLavazemtahrir from '../../assets/images/icon-lavazemtahrir.svg';
@@ -13,7 +13,7 @@ import iconHealth from '../../assets/images/icon-health.svg';
 import iconDigital from '../../assets/images/icon-digital.svg';
 import iconTools from '../../assets/images/icon-tools.svg';
 
-function CategoriesSlider() {
+function CategoriesSliderHome() {
 
     return (
         <Row
@@ -132,4 +132,4 @@ function CategoriesSlider() {
     )
 }
 
-export default CategoriesSlider;
+export default CategoriesSliderHome;

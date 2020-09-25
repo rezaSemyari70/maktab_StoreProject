@@ -8,8 +8,8 @@ import routes from '../Constants/routes';
 function DefaultContent() {
     return (
         <div>
-            <Header/>
-            <Content/>
+            {/* <Header/>
+            <Content/> */}
             <BrowserRouter>
                 <Switch>
                     <React.Suspense fallback={< div > loding ...</div>}>
@@ -24,7 +24,7 @@ function DefaultContent() {
                     </React.Suspense>
                 </Switch>
             </BrowserRouter>
-            <Footer/>
+            {/* <Footer/> */}
         </div>
     )
 }
