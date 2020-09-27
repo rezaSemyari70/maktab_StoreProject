@@ -22,24 +22,13 @@
 }
 
 .specialProductCard {
-    @include contentFlex();
-    width: 25vw !important;
+    width: 300px !important;
     height: 100% !important;
     border: none !important;
     border-radius: 6px !important;
-    min-height: 300px !important;
-    min-width: 160px !important;
-    max-width: 220px !important;
-}
-
-.specialboxBanner {
-    width: 400px !important;
-    height: 200px !important;
-    // display: flex !important;
-    // justify-content: center !important;
-    // align-items: center !important;
-    margin-right: 20px !important;
-    padding-left: 10px !important;
+    min-height: 400px !important;
+    max-width: 300px !important;
+    min-width: 220px !important;
 }
 
 .containerOwlCarousel {
@@ -61,11 +50,39 @@
     margin-bottom: 20px !important;
     padding: 20px !important;
 }
+
+.specialBoxImage{
+    margin-top: 20px !important;
+    height: 200px !important;
+}
 .img-i {
-    width: 92% !important;
-    height: auto !important;
+    width: auto !important;
+    height: 80% !important;
     border: none !important;
-    margin-bottom: 20px !important;
+    
+}
+
+.specialInfoBox{
+    width: 70% !important;
+    height: 80px !important;
+}
+
+.specialNameProduct{
+    min-height: 50px !important;
+    display: flex !important;
+    justify-content: center !important;
+    .specialNameProduct p {
+        font-size: 16px !important;
+        font-weight: bold !important;
+    }
+}
+
+.badgeOff{
+    min-height: 30px !important;
+    min-width: 40px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 }
 
 .owl-prev {

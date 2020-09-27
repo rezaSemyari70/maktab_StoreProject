@@ -45,8 +45,8 @@
 }
 
 .imgCategories {
-  width: 80% !important;
-  height: 40% !important;
+  width: 50px !important;
+  height: auto !important;
   border: none !important;
 }
 

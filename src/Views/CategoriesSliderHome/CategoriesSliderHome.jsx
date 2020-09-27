@@ -1,19 +1,27 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import './CategoriesSliderHome.scss';
 import {Col, Row} from 'reactstrap';
-import iconCoat from '../../assets/images/icon-coat.svg';
-import iconBasketFood from '../../assets/images/icon-basketFood.svg';
-import iconLavazemtahrir from '../../assets/images/icon-lavazemtahrir.svg';
-import iconSport from '../../assets/images/icon-sport.svg';
-import iconChair from '../../assets/images/icon-chair.svg';
-import iconHealth from '../../assets/images/icon-health.svg';
-import iconDigital from '../../assets/images/icon-digital.svg';
-import iconTools from '../../assets/images/icon-tools.svg';
+import api from '../../Api/api';
+
+
 
 function CategoriesSliderHome() {
+
+    const [categories, setCategories] = useState([]);
+    const [pending, setPending] = useState(true);
+
+    console.log(categories)
+
+    useEffect(() => {
+        api.get("products/categories").then(res => {
+                setCategories(res.data)
+                setPending(false)
+            })
+            .catch(error => console.log(error))
+    }, []);
 
     return (
         <Row
@@ -26,16 +34,33 @@ function CategoriesSliderHome() {
                     <OwlCarousel
                         className="owl-theme ml-4"
                         items={2}
-                        margin={80}
+                        margin={100}
                         autoplay={true}
-                        autoplayTimeout={1000}
+                        autoplayTimeout={1500}
                         autoplaySpeed={true}
                         loop
                         autoWidth
                         animateIn={true}
                         dots={false}
                         nav>
-                        <div className=" specialProductCard">
+
+                        {categories.map(category => (
+                            <Row key={category.id}>
+                                <Col>
+                                    <Row className="justify-content-center">
+                                        <img className="imgCategories" src={category.image.src} alt="pic"/>
+                                    </Row>
+                                    <Row className="d-flex justify-content-center">
+                                        <Col>
+                                            <strong>{category.name}</strong>
+
+                                        </Col>
+                                    </Row>
+                                </Col>
+                            </Row>
+                        ))}
+
+                        {/* <div className=" specialProductCard">
                             <img
                                 className="imgCategories"
                                 src={iconCoat}
@@ -43,7 +68,7 @@ function CategoriesSliderHome() {
                             <Row className="d-flex justify-content-center">
                                 <Col>
                                     <strong>مد و پوشاک</strong>
-                                    
+
                                 </Col>
                             </Row>
                         </div>
@@ -55,7 +80,7 @@ function CategoriesSliderHome() {
                             <Row className="d-flex justify-content-center">
                                 <Col>
                                     <strong>خوردنی و آشامیدنی</strong>
-                                    
+
                                 </Col>
                             </Row>
                         </div>
@@ -124,7 +149,7 @@ function CategoriesSliderHome() {
                                     <strong>ابزار و تجهیزات</strong>
                                 </Col>
                             </Row>
-                        </div>
+                        </div> */}
                     </OwlCarousel>
                 </Row>
             </Col>

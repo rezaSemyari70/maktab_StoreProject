@@ -1,12 +1,30 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import './SpecialProductSlider.scss';
 import {Card, Col, Row} from 'reactstrap';
 import img1 from '../../assets/images/specialBannerPic.png';
+import {getProducts} from '../../redux/reducers/product/product.thunk';
+import {connect} from 'react-redux';
+import api from '../../Api/api';
+import CardProduct from '../../Components/CardProduct/CardProduct';
+
+import './SpecialProductSlider.scss';
 
 function SpecialProductSlider() {
+
+    // const specialProducts = useSelector(state => state.product.results);
+
+    const [specialProducts, setSpecialProducts] = useState([])
+    const [pending, setPending] = useState(true)
+
+    useEffect(() => {
+        api.get("products" ,{on_sale:true}).then(res => {
+                setSpecialProducts(res.data)
+                setPending(false)
+            })
+            .catch(error => console.log(error))
+    }, []);
 
     return (
         <Row
@@ -18,8 +36,7 @@ function SpecialProductSlider() {
 
                 <Row className='d-flex containerOwlCarousel flex-nowrap order mr-3'>
                     <Col className="d-block specialboxBanner order-1 mt-5 ">
-                        <img className="imageBanner" src={img1} alt=""/>
-                        {/* <button>مشاهده همه محصولات</button> */}
+                        <img className="imageBanner" src={img1} alt=""/> {/* <button>مشاهده همه محصولات</button> */}
                     </Col>
                     <OwlCarousel
                         className="owl-theme ml-4"
@@ -32,157 +49,16 @@ function SpecialProductSlider() {
                         dots={false}
                         nav>
 
-                        <Card className="specialProductCard">
-                            <img
-                                className="img-i"
-                                src={"https://woocommerce.maktabsharif.ir/wp-content/uploads/2019/12/2473246.jpg"}
-                                alt="pic"/>
-                            <Row className="d-flex justify-content-center">
-                                <Col>
-                                    <strong>product name</strong>
-                                    <p>product desc</p>
-                                    <span>price product</span>
-                                </Col>
-                            </Row>
-                        </Card>
-                        <Card className="specialProductCard"><img
-                            className="img-i"
-                            src={"https://woocommerce.maktabsharif.ir/wp-content/uploads/2020/01/2782153.jpg"}
-                            alt="pic"/>
-                            <Row className="d-flex justify-content-center">
-                                <Col>
-                                    <strong>product name</strong>
-                                    <p>product desc</p>
-                                    <span>price product</span>
-                                </Col>
-                            </Row>
-                        </Card>
-                        <Card className="specialProductCard"><img
-                            className="img-i"
-                            src={"https://woocommerce.maktabsharif.ir/wp-content/uploads/2020/01/3239247.jpg"}
-                            alt="pic"/>
-                            <Row className="d-flex justify-content-center">
-                                <Col>
-                                    <strong>product name</strong>
-                                    <p>product desc</p>
-                                    <span>price product</span>
-                                </Col>
-                            </Row>
-                        </Card>
-                        <Card className="specialProductCard"><img
-                            className="img-i"
-                            src={"https://woocommerce.maktabsharif.ir/wp-content/uploads/2019/12/2473246.jpg"}
-                            alt="pic"/>
-                            <Row className="d-flex justify-content-center">
-                                <Col>
-                                    <strong>product name</strong>
-                                    <p>product desc</p>
-                                    <span>price product</span>
-                                </Col>
-                            </Row>
-                        </Card>
-                        <Card className="specialProductCard"><img
-                            className="img-i"
-                            src={"https://woocommerce.maktabsharif.ir/wp-content/uploads/2020/01/113845063.jpg"}
-                            alt="pic"/>
-                            <Row className="d-flex justify-content-center">
-                                <Col>
-                                    <strong>product name</strong>
-                                    <p>product desc</p>
-                                    <span>price product</span>
-                                </Col>
-                            </Row>
-                        </Card>
-                        <Card className="specialProductCard"><img
-                            className="img-i"
-                            src={"https://woocommerce.maktabsharif.ir/wp-content/uploads/2019/12/2371066.jpg"}
-                            alt="pic"/>
-                            <Row className="d-flex justify-content-center">
-                                <Col>
-                                    <strong>product name</strong>
-                                    <p>product desc</p>
-                                    <span>price product</span>
-                                </Col>
-                            </Row>
-                        </Card>
-                        <Card className="specialProductCard"><img
-                            className="img-i"
-                            src={"https://woocommerce.maktabsharif.ir/wp-content/uploads/2019/12/2473246.jpg"}
-                            alt="pic"/>
-                            <Row className="d-flex justify-content-center">
-                                <Col>
-                                    <strong>product name</strong>
-                                    <p>product desc</p>
-                                    <span>price product</span>
-                                </Col>
-                            </Row>
-                        </Card>
-                        <Card className="specialProductCard"><img
-                            className="img-i"
-                            src={"https://woocommerce.maktabsharif.ir/wp-content/uploads/2020/01/2782153.jpg"}
-                            alt="pic"/>
-                            <Row className="d-flex justify-content-center">
-                                <Col>
-                                    <strong>product name</strong>
-                                    <p>product desc</p>
-                                    <span>price product</span>
-                                </Col>
-                            </Row>
-                        </Card>
-                        <Card className="specialProductCard"><img
-                            className="img-i"
-                            src={"https://woocommerce.maktabsharif.ir/wp-content/uploads/2020/01/3239247.jpg"}
-                            alt="pic"/>
-                            <Row className="d-flex justify-content-center">
-                                <Col>
-                                    <strong>product name</strong>
-                                    <p>product desc</p>
-                                    <span>price product</span>
-                                </Col>
-                            </Row>
-                        </Card>
-                        <Card className="specialProductCard"><img
-                            className="img-i"
-                            src={"https://woocommerce.maktabsharif.ir/wp-content/uploads/2019/12/2473246.jpg"}
-                            alt="pic"/>
-                            <Row className="d-flex justify-content-center">
-                                <Col>
-                                    <strong>product name</strong>
-                                    <p>product desc</p>
-                                    <span>price product</span>
-                                </Col>
-                            </Row>
-                        </Card>
-                        <Card className="specialProductCard"><img
-                            className="img-i"
-                            src={"https://woocommerce.maktabsharif.ir/wp-content/uploads/2020/01/113845063.jpg"}
-                            alt="pic"/>
-                            <Row className="d-flex justify-content-center">
-                                <Col>
-                                    <strong>product name</strong>
-                                    <p>product desc</p>
-                                    <span>price product</span>
-                                </Col>
-                            </Row>
-                        </Card>
-                        <Card className="specialProductCard"><img
-                            className="img-i"
-                            src={"https://woocommerce.maktabsharif.ir/wp-content/uploads/2019/12/2371066.jpg"}
-                            alt="pic"/>
-                            <Row className="d-flex justify-content-center">
-                                <Col>
-                                    <strong>product name</strong>
-                                    <p>product desc</p>
-                                    <span>price product</span>
-                                </Col>
-                            </Row>
-                        </Card>
+                        {specialProducts.map(item => (
+                            <Card key={item.id} className="specialProductCard">
+                                <CardProduct item={item}/>
+                            </Card>
+                        ))}
                     </OwlCarousel>
-
                 </Row>
             </Col>
         </Row>
     )
 }
 
-export default SpecialProductSlider;
+export default connect(null, {getProducts})(SpecialProductSlider);

@@ -4,22 +4,23 @@ import CategoriesSliderHome from '../../Views/CategoriesSliderHome/CategoriesSli
 import HomeSlider from '../../Views/HomeSlider/HomeSlider';
 import SpecialProductSlider from '../../Views/SpecialProductSlider/SpecialProductSlider';
 import SupermarketBanner from '../../Views/SupermarketBanner/SupermarketBanner';
+import {getProducts} from '../../redux/reducers/product/product.thunk';
+import {connect} from 'react-redux';
+
 import './Content.scss';
 
-
-
-const DefaultContent = (props) => {
+const DefaultContent = ({props , getProducts}) => {
     
 
 
     return (
       <div>
         <HomeSlider/>
-        <SpecialProductSlider/>
+        <SpecialProductSlider getProducts={()=>getProducts()}/>
         <SupermarketBanner/>
         <CategoriesSliderHome/>
       </div>
     );
 }
 
-export default DefaultContent;
+export default connect(null , {getProducts})(DefaultContent);
