@@ -6,7 +6,7 @@ import SpecialProductSlider from '../../Views/SpecialProductSlider/SpecialProduc
 import SupermarketBanner from '../../Views/SupermarketBanner/SupermarketBanner';
 import {getProducts} from '../../redux/reducers/product/product.thunk';
 import {connect} from 'react-redux';
-
+import BestsellersSliderHome from '../../Views/BestsellersSliderHome/BestsellersSliderHome';
 import './Content.scss';
 
 const DefaultContent = ({props , getProducts}) => {
@@ -19,6 +19,7 @@ const DefaultContent = ({props , getProducts}) => {
         <SpecialProductSlider getProducts={()=>getProducts()}/>
         <SupermarketBanner/>
         <CategoriesSliderHome/>
+        <BestsellersSliderHome/>
       </div>
     );
 }

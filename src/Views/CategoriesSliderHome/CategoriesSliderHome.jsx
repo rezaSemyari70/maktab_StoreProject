@@ -53,103 +53,11 @@ function CategoriesSliderHome() {
                                     <Row className="d-flex justify-content-center">
                                         <Col>
                                             <strong>{category.name}</strong>
-
                                         </Col>
                                     </Row>
                                 </Col>
                             </Row>
                         ))}
-
-                        {/* <div className=" specialProductCard">
-                            <img
-                                className="imgCategories"
-                                src={iconCoat}
-                                alt="pic"/>
-                            <Row className="d-flex justify-content-center">
-                                <Col>
-                                    <strong>مد و پوشاک</strong>
-
-                                </Col>
-                            </Row>
-                        </div>
-                        <div className="specialProductCard">
-                            <img
-                                className="imgCategories"
-                                src={iconBasketFood}
-                                alt="pic"/>
-                            <Row className="d-flex justify-content-center">
-                                <Col>
-                                    <strong>خوردنی و آشامیدنی</strong>
-
-                                </Col>
-                            </Row>
-                        </div>
-                        <div className="specialProductCard">
-                            <img
-                                className="imgCategories"
-                                src={iconLavazemtahrir}
-                                alt="pic"/>
-                            <Row className="d-flex justify-content-center">
-                                <Col>
-                                    <strong>لوازم تحریر</strong>
-                                </Col>
-                            </Row>
-                        </div>
-                        <div className="specialProductCard">
-                            <img
-                                className="imgCategories"
-                                src={iconSport}
-                                alt="pic"/>
-                            <Row className="d-flex justify-content-center">
-                                <Col>
-                                    <strong>ورزش و سفر</strong>
-                                </Col>
-                            </Row>
-                        </div>
-                        <div className="specialProductCard">
-                            <img
-                                className="imgCategories"
-                                src={iconChair}
-                                alt="pic"/>
-                            <Row className="d-flex justify-content-center">
-                                <Col>
-                                    <strong>خانه و آشپزخانه</strong>
-                                </Col>
-                            </Row>
-                        </div>
-                        <div className="specialProductCard">
-                            <img
-                                className="imgCategories"
-                                src={iconHealth}
-                                alt="pic"/>
-                            <Row className="d-flex justify-content-center">
-                                <Col>
-                                    <strong>سلامت</strong>
-                                </Col>
-                            </Row>
-                        </div>
-                        <div className="specialProductCard">
-                            <img
-                                className="imgCategories"
-                                src={iconDigital}
-                                alt="pic"/>
-                            <Row className="d-flex justify-content-center">
-                                <Col>
-                                    <strong>دیجیتال</strong>
-                                </Col>
-                            </Row>
-                        </div>
-                        <div className="specialProductCard">
-                            <img
-                                className="imgCategories"
-                                src={iconTools}
-                                alt="pic"/>
-                            <Row className="d-flex justify-content-center">
-                                <Col>
-                                    <strong>ابزار و تجهیزات</strong>
-                                </Col>
-                            </Row>
-                        </div> */}
                     </OwlCarousel>
                 </Row>
             </Col>
