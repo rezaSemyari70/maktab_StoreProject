@@ -18,8 +18,9 @@ function SpecialProductSlider() {
     const [specialProducts, setSpecialProducts] = useState([])
     const [pending, setPending] = useState(true)
 
+
     useEffect(() => {
-        api.get("products" ,{on_sale:true}).then(res => {
+        api.get("products",{category:119 , on_sale:true , per_page: 30}).then(res => {
                 setSpecialProducts(res.data)
                 setPending(false)
             })

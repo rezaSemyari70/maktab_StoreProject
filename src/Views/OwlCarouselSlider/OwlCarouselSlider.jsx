@@ -1,7 +1,7 @@
 import React from 'react';
 import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
+import '../ResentlyProducts/node_modules/owl.carousel/dist/assets/owl.carousel.css';
+import '../ResentlyProducts/node_modules/owl.carousel/dist/assets/owl.theme.default.css';
 import {Card, Col, Row} from 'reactstrap';
 import img1 from '../../assets/images/specialBannerPic.png';
 import api from '../../Api/api';

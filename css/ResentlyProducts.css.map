@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAA;EACL,SAAS,EAAE,GAAG;CACjB;;AAED,AAAA,uBAAuB,CAAA;EACnB,MAAM,EAAE,eAAe;EACvB,aAAa,EAAC,8BAA8B;EAC5C,SAAS,EAAE,cAAc;EACzB,aAAa,EAAE,eAAe;EAC9B,SAAS,EAAE,eAAe;EAC1B,WAAW,EAAE,eAAe;CAC/B",
+    "sources": [
+        "../src/Views/ResentlyProducts/ResentlyProducts.scss"
+    ],
+    "names": [],
+    "file": "ResentlyProducts.css"
+}

@@ -2,10 +2,10 @@ import React, {useState, useEffect} from 'react';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import './CategoriesSliderHome.scss';
 import {Col, Row} from 'reactstrap';
 import api from '../../Api/api';
 
+import './CategoriesSliderHome.scss';
 
 
 function CategoriesSliderHome() {

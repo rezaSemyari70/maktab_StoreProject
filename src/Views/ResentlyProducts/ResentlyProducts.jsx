@@ -3,51 +3,53 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import {Card, Col, Row} from 'reactstrap';
-import img from '../../assets/images/bestSellersbanner.png';
 import api from '../../Api/api';
 import CardProduct from '../../Components/CardProduct/CardProduct';
 
+import './ResentlyProducts.scss';
 
-function BestsellersSliderHome() {
+function ResentlyProducts() {
 
-    const [bestsellers, setBestsellers] = useState([])
+    const [digitalProducts, setDigitalProducts] = useState([])
     const [pending, setPending] = useState(true)
-    console.log(bestsellers)
+
+    const resentlyProducts = digitalProducts.filter(item => item.date_created >= "2020-01-03T05:00:00")
+    console.log(resentlyProducts)
+
     useEffect(() => {
-        api.get("products" ,{on_sale:true , per_page: 50}).then(res => {
-            setBestsellers(res.data)
+        api.get("products").then(res => {
+                setDigitalProducts(res.data)
                 setPending(false)
             })
             .catch(error => console.log(error))
     }, []);
+
 
     return (
         <Row
             style={{
             direction: "ltr"
         }}
-            className="bg-primary mt-5 pt-3 contentSpecialCarousel">
+            className="mt-3 pt-3 contentSpecialCarousel">
             <Col>
+            <Row className="headerResentlyProducts">جدیدترین محصولات</Row>
 
-                <Row className='d-flex containerOwlCarousel flex-nowrap order mr-3'>
-                    <Col className="d-block specialboxBanner order-1 mt-5 ">
-                        <img className="imageBanner" src={img} alt=""/> {/* <button>مشاهده همه محصولات</button> */}
-                    </Col>
+                <Row className='d-flex containerOwlCarousel fullWith order mr-3 '>
+                    
                     <OwlCarousel
                         className="owl-theme ml-4"
-                        items={2}
+                        items={5}
                         margin={10}
-                        autoplay={true}
-                        loop
+                        autoplay={false}
                         autoWidth
                         animateOut
                         dots={false}
                         nav>
 
-                        {bestsellers.map(item => (
+                        {resentlyProducts.map(item => (
                             <Card key={item.id} className="specialProductCard">
                                 <CardProduct item={item}/>
-                            </Card>
+                            </Card> 
                         ))}
                     </OwlCarousel>
                 </Row>
@@ -56,4 +58,4 @@ function BestsellersSliderHome() {
     )
 }
 
-export default BestsellersSliderHome;
+export default ResentlyProducts;
