@@ -3,6 +3,7 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import {Col, Row} from 'reactstrap';
+import {Link} from 'react-router-dom';
 import api from '../../Api/api';
 
 import './CategoriesSliderHome.scss';
@@ -13,10 +14,8 @@ function CategoriesSliderHome() {
     const [categories, setCategories] = useState([]);
     const [pending, setPending] = useState(true);
 
-    console.log(categories)
-
     useEffect(() => {
-        api.get("products/categories").then(res => {
+        api.get(`products/categories/`).then(res => {
                 setCategories(res.data)
                 setPending(false)
             })
@@ -35,7 +34,7 @@ function CategoriesSliderHome() {
                         className="owl-theme ml-4"
                         items={2}
                         margin={100}
-                        autoplay={true}
+                        // autoplay={true}
                         autoplayTimeout={1500}
                         autoplaySpeed={true}
                         loop
@@ -47,9 +46,11 @@ function CategoriesSliderHome() {
                         {categories.map(category => (
                             <Row key={category.id}>
                                 <Col>
-                                    <Row className="justify-content-center">
-                                        <img className="imgCategories" src={category.image.src} alt="pic"/>
-                                    </Row>
+                                    <Link to ={`/CategoryProductsPage/${category.id}`}>
+                                        <Row className="justify-content-center">
+                                            <img className="imgCategories" src={category.image.src} alt="pic"/>
+                                        </Row>
+                                    </Link>
                                     <Row className="d-flex justify-content-center">
                                         <Col>
                                             <strong>{category.name}</strong>

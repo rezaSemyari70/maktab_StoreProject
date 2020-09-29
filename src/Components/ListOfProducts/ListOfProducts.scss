@@ -1,0 +1,60 @@
+@mixin contentFlex {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+
+.specialProductCard {
+    width: 100% !important;
+    border:1px solid #e2e2e2 !important;
+    border-radius: 0px !important;
+    min-height: 400px !important;
+    
+}
+
+.specialProductCard:hover{
+    box-shadow: 2px 2px 5px 2px #e2e2e2 !important;
+    transform: scale(1.01);
+    z-index: 10000 !important;
+}
+
+
+.title {
+    margin-bottom: 20px !important;
+    padding: 20px !important;
+}
+
+.specialBoxImage{
+    margin-top: 20px !important;
+    height: 200px !important;
+}
+.img-i {
+    width: auto !important;
+    height: 80% !important;
+    border: none !important;
+    
+}
+
+.specialInfoBox{
+    width: 70% !important;
+    height: 80px !important;
+}
+
+.specialNameProduct{
+    min-height: 50px !important;
+    display: flex !important;
+    justify-content: center !important;
+    .specialNameProduct p {
+        font-size: 16px !important;
+        font-weight: bold !important;
+    }
+}
+
+.badgeOff{
+    min-height: 30px !important;
+    min-width: 40px !important;
+    display: flex !important;
+    justify-content: end !important;
+    align-items: center !important;
+}
