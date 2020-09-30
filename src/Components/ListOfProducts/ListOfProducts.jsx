@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import {Row, Col, Container} from 'reactstrap';
 import CardProduct from '../CardProduct/CardProduct';
 import './ListOfProducts.scss';
@@ -22,7 +23,7 @@ function ListOfProducts({listProducts}) {
                     }}>
                         {listProducts.map(item => 
                             (<Col xs={12} sm={6} lg={4} className="p-0" key={item.id}>
-                                <CardProduct item={item}/>
+                                <Link to={`/ShowProductPage/${item.id}`}><CardProduct item={item}/></Link>
                             </Col>))}
                     </Row>
                 </Col>

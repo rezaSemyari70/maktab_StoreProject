@@ -1,0 +1,52 @@
+.ProductInfoBox p {
+  display: flex !important;
+  justify-content: start !important;
+  margin-bottom: 0 !important;
+  padding-right: 10px !important;
+}
+
+.ProductInfoBox:nth-child(even) {
+  padding-right: 20px !important;
+  padding-left: 10px !important;
+}
+
+.titleSubject, .bgNameProduct, .titleDescribtion {
+  font-weight: bolder !important;
+  height: 60px !important;
+  padding-right: 20px !important;
+}
+
+.bgNameProduct {
+  background-color: dodgerblue;
+  color: white !important;
+}
+
+.titleDescribtion {
+  background-color: #aaaaaa !important;
+}
+
+.bgGray {
+  border: 1px solid white !important;
+  height: 100% !important;
+}
+
+.describStyle {
+  line-height: 40px !important;
+}
+
+.rowInfo {
+  display: flex;
+  align-items: center !important;
+  height: 50px !important;
+  background-color: rgba(214, 214, 214, 0.116) !important;
+}
+
+.describeTitle {
+  background-color: lightgray !important;
+  height: 40px !important;
+}
+
+.rowDescrib {
+  background-color: rgba(214, 214, 214, 0.116) !important;
+}
+/*# sourceMappingURL=ProductInfo.css.map */

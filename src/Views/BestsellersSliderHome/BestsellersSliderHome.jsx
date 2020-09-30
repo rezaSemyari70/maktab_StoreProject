@@ -6,7 +6,7 @@ import {Card, Col, Row} from 'reactstrap';
 import img from '../../assets/images/bestSellersbanner.png';
 import api from '../../Api/api';
 import CardProduct from '../../Components/CardProduct/CardProduct';
-
+import {Link} from 'react-router-dom';
 
 function BestsellersSliderHome() {
 
@@ -46,7 +46,7 @@ function BestsellersSliderHome() {
 
                         {bestsellers.map(item => (
                             <Card key={item.id} className="specialProductCard">
-                                <CardProduct item={item}/>
+                                <Link to={`ShowProductPage/${item.id}`}><CardProduct item={item}/></Link>
                             </Card>
                         ))}
                     </OwlCarousel>

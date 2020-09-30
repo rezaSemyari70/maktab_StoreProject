@@ -1,0 +1,57 @@
+.ProductInfoBox p {
+    display: flex !important;
+    justify-content: start !important;
+    margin-bottom: 0 !important;
+    padding-right: 10px !important;
+}
+
+.ProductInfoBox:nth-child(even) {
+    padding-right: 20px !important;
+    padding-left: 10px !important;
+}
+
+.titleSubject{
+    font-weight: bolder !important;
+    height: 60px !important;
+    padding-right: 20px !important;
+}
+
+.bgNameProduct{
+    background-color: dodgerblue;;
+    color: white !important;
+    @extend .titleSubject;
+}
+
+.titleDescribtion{
+    @extend .titleSubject;
+    background-color: rgb(170, 170, 170) !important;
+}
+
+.bgGray{
+    border:1px solid white !important;
+    height: 100% !important;
+}
+
+// .bgPrice{
+//     background-color: yellowgreen !important;
+// }
+
+.describStyle{
+    line-height: 40px !important;
+}
+
+.rowInfo{
+    display: flex ;
+    align-items: center !important;
+    height: 50px !important;
+    background-color: rgba(214, 214, 214, 0.116) !important;
+}
+
+.describeTitle{
+    background-color: rgb(211, 211, 211) !important;
+    height: 40px !important;
+}
+
+.rowDescrib{
+    background-color: rgba(214, 214, 214, 0.116) !important;
+}

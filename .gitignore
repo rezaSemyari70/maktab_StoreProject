@@ -35,3 +35,7 @@ yarn-error.log*
 /css/SpecialProductSlider.css.map
 /css/SupermarketBanner.css.map
 /css/ListOfProducts.css.map
+/css/ShowProductPage.css.map
+/css/ResentlyProducts.css.map
+/css/ProductInfo.css.map
+/css/RelatedProducts.css.map

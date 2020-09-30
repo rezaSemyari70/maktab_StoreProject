@@ -1,7 +1,6 @@
 {
   "name": "mystore",
   "version": "0.1.0",
-  "homepage": "https://rezaSemyari70.github.io/maktab_StoreProject",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
