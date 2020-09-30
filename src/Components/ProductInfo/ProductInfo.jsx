@@ -1,12 +1,11 @@
 import React, {useState, useEffect} from 'react'
-import {Row, Col} from 'reactstrap';
-import RelatedProducts from '../RelatedProducts/RelatedProducts';
 import SliderSingleProduct from '../SliderSingleProduct/SliderSingleProduct';
 import {useParams} from 'react-router-dom';
 import api from '../../Api/api';
+import ContentInfo from '../ContentInfo/ContentInfo';
+import Spinner from '../../Components/Spinner/Spinner';
 
 import './ProductInfo.scss';
-import ContentInfo from '../ContentInfo/ContentInfo';
 
 function ProductInfo() {
 
@@ -39,8 +38,11 @@ function ProductInfo() {
 
     return (
         <div>
+            { pending ? <Spinner/>
+            :<div>
             <SliderSingleProduct items={items}/>
             <ContentInfo  singleProduct={singleProduct}/>
+            </div>}
         </div>
     )
 }

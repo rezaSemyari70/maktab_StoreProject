@@ -7,6 +7,7 @@ import img from '../../assets/images/bestSellersbanner.png';
 import api from '../../Api/api';
 import CardProduct from '../../Components/CardProduct/CardProduct';
 import {Link} from 'react-router-dom';
+import Spinner from '../../Components/Spinner/Spinner';
 
 function BestsellersSliderHome() {
 
@@ -27,7 +28,7 @@ function BestsellersSliderHome() {
             direction: "ltr"
         }}
             className="bg-primary mt-5 pt-3 contentSpecialCarousel">
-            <Col>
+            { pending ? <Spinner/> :<Col>
 
                 <Row className='d-flex containerOwlCarousel flex-nowrap order mr-3'>
                     <Col className="d-block specialboxBanner order-1 mt-5 ">
@@ -51,7 +52,7 @@ function BestsellersSliderHome() {
                         ))}
                     </OwlCarousel>
                 </Row>
-            </Col>
+            </Col>}
         </Row>
     )
 }

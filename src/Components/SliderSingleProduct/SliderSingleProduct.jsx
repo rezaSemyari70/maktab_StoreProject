@@ -1,37 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption} from 'reactstrap';
 import {Col, Row} from 'reactstrap';
-// import {useParams} from 'react-router-dom';
-// import api from '../../Api/api';
-// import ProductInfo from '../../Components/ProductInfo/ProductInfo';
-
-// import './ShowProductPage.scss'
 
 const SliderSingleProduct = ({items}) => {
-
-//     const {id} = useParams();
-//     console.log(id)
-
-//     const [singleProduct , setSingleProduct] = useState({images: [{}]})
-//     const [pending , setPending] = useState(true)
-// console.log(singleProduct)
-//     useEffect(() => {
-//         api.get(`products/${id}`).then(res => {
-//                 setSingleProduct(res.data)
-//                 setPending(false)
-//             })
-//             .catch(error => console.log(error))
-//     }, [])
-
-    // const items = singleProduct.images.map(item => {
-    //     return (
-    //         {
-    //             src: item.src,
-    //             id: item.id
-    //         }
-    //     );
-    // })
-    // console.log(items)
 
     const [activeIndex , setActiveIndex] = useState(0);
     const [animating , setAnimating] = useState(false);

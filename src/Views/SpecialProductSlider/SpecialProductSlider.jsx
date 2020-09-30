@@ -9,6 +9,7 @@ import {connect} from 'react-redux';
 import api from '../../Api/api';
 import CardProduct from '../../Components/CardProduct/CardProduct';
 import {Link} from 'react-router-dom';
+import Spinner from '../../Components/Spinner/Spinner';
 
 import './SpecialProductSlider.scss';
 
@@ -22,7 +23,7 @@ function SpecialProductSlider() {
 
     useEffect(() => {
         api.get("products",{category:119 , on_sale:true , per_page: 30}).then(res => {
-                setSpecialProducts(res.data)
+                setSpecialProducts(res.data);
                 setPending(false)
             })
             .catch(error => console.log(error))
@@ -34,6 +35,7 @@ function SpecialProductSlider() {
             direction: "ltr"
         }}
             className="bg-danger mt-5 pt-3 contentSpecialCarousel">
+            {pending ? <Spinner/> :
             <Col>
 
                 <Row className='d-flex containerOwlCarousel flex-nowrap order mr-3'>
@@ -58,8 +60,9 @@ function SpecialProductSlider() {
                         ))}
                     </OwlCarousel>
                 </Row>
-            </Col>
+            </Col>}
         </Row>
+   
     )
 }
 
