@@ -1,9 +1,10 @@
 import React from 'react';
 import {Row, Col, Container, Input} from 'reactstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faBars, faSearch, faShoppingCart} from '@fortawesome/free-solid-svg-icons';
+import {faSearch, faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 import './Header.scss';
 import CategoryProducts from '../../Views/CategoryProducts/CategoryProducts';
+import HomeDrawerMenu from '../../Views/HomeDrawerMenu/HomeDrawerMenu';
 
 const DefaultHeader = () => {
 
@@ -13,32 +14,7 @@ const DefaultHeader = () => {
                 <Col>
                     <Row>
                         <Col className="contentCenter" xs={4}>
-                            <Row>
-                                <Col className="d-md-none">
-                                    <Row className="menuBox">
-                                        <Col>
-                                            <input type="checkbox" id="drawer-toggle" name="drawer-toggle"/>
-                                            <label htmlFor="drawer-toggle" id="drawer-toggle-label"></label>
-                                            <FontAwesomeIcon icon={faBars} size="lg"/>
-                                            <ul id="drawer">
-                                                <li>
-                                                    <a href="#">Menu Item</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Menu Item</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Menu Item</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Menu Item</a>
-                                                </li>
-                                            </ul>
-                                        </Col>
-                                    </Row>
-                                </Col>
-                                <Col className="d-none d-md-flex align-items-center">Logo</Col>
-                            </Row>
+                            <HomeDrawerMenu/>
                         </Col>
                         <Col xs={6}>
                             <Row className="d-none d-md-flex">
@@ -72,15 +48,7 @@ const DefaultHeader = () => {
                     <Row className="d-none d-md-flex mt-4">
                         <Col className="p-0">
                             <CategoryProducts/>
-                            {/* <Row>
-                                <Col>Column</Col>
-                                <Col>Column</Col>
-                                <Col>Column</Col>
-                                <Col>Column</Col>
-                                <Col>Column</Col>
-                            </Row> */}
                         </Col>
-                        {/* <Col></Col> */}
                     </Row>
                 </Col>
             </Row>

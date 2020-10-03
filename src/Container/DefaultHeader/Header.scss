@@ -178,3 +178,199 @@ header {
     }
 
 }
+
+
+// --------- Drawer Menu -----
+
+@mixin contentFlex {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.topHeader {
+    height: 120px !important;
+    width: 100vw !important;
+    align-items: center !important;
+    position: relative !important;
+}
+@media (min-width: 767.98px) {
+    .topHeader {
+        height: 140px !important;
+    }
+}
+
+.menuBox {
+    @include contentFlex();
+}
+
+.menuButton {
+    background-color: white !important;
+    color: rgb(43, 43, 43) !important;
+    border: none !important;
+    border-radius: 4px !important;
+}
+
+.searchBox {
+    @include contentFlex();
+    padding: none !important;
+}
+
+.searchProduct {
+    border-radius: 20px !important;
+}
+
+.iconSearch {
+    margin-left: 15px;
+    transform: rotate(90deg);
+}
+
+.shoppingBasket {
+    @include contentFlex();
+    justify-content: flex-end !important;
+
+}
+
+.contentCenter {
+    @include contentFlex();
+    justify-content: flex-start !important;
+}
+
+/* ****Dashboard Home page**** */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: none;
+}
+
+/* Makes sure that everything is 100% height */
+body,
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* gets the actual input out of the way; 
+    we're going to style the label instead */
+#drawer-toggle {
+    position: absolute;
+    opacity: 0;
+}
+
+#drawer-toggle-label {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    right: 0;
+    top: 0;
+    height: 50px;
+    width: 50px;
+    display: block;
+    position: fixed;
+    background: rgb(0, 0, 0)portant;
+    z-index: 1000;
+}
+
+/* adds our "hamburger" menu icon */
+header {
+    width: 100%;
+    position: fixed;
+    right: 0;
+    background: #efefef;
+    padding: 10px 10px 10px 50px;
+    font-size: 30px;
+    line-height: 30px;
+    z-index: 0;
+}
+
+/* drawer menu pane - note the 0px width */
+#drawer {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100%;
+    width: 200px;
+    background: #f12a6de3;
+    overflow-x: hidden;
+    // overflow-y: scroll; 
+    padding: 20px;
+    -webkit-overflow-scrolling: touch;
+    z-index: 100000;
+    /* adds animation for all transitions */
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+}
+
+/* checked styles (menu open state) */
+#drawer-toggle:checked ~ #drawer-toggle-label {
+    height: 100%;
+    width: calc(100% );
+    background: rgba(255, 255, 255, 0.438);
+}
+#drawer-toggle:checked ~ #drawer-toggle-label,
+#drawer-toggle:checked ~ header {
+    right: 0;
+}
+#drawer-toggle:checked ~ #drawer {
+    right: 0;
+}
+#drawer-toggle:checked ~ #page-content {
+    margin-right: 200px;
+}
+
+/* Menu item styles */
+#drawer li{
+    list-style-type: none !important;
+    display: flex !important;
+    justify-content: start !important;
+    margin:20px 0px !important;
+}
+
+#drawer ul a {
+    display: block;
+    padding: 10px;
+    color: #c7c7c7;
+    text-decoration: none !important;
+    text-align: start !important;
+    
+}
+
+#drawer a{
+    margin-right: 10px !important;
+    font-size: 14px !important;
+    color: rgb(49, 49, 49);
+    font-weight: bold !important;
+}
+#drawer ul a:hover {
+    color: white;
+}
+
+/* Responsive MQ */
+@media all and (max-width:350px) {
+    #drawer-toggle:checked ~ #drawer-toggle-label {
+        height: 100%;
+        width: 50px;
+    }
+    #drawer-toggle:checked ~ #drawer-toggle-label,
+    #drawer-toggle:checked ~ header {
+        right: calc(100% - 50px);
+    }
+    #drawer-toggle:checked ~ #drawer {
+        width: calc(100% - 50px);
+        padding: 20px;
+    }
+    #drawer-toggle:checked ~ #page-content {
+        margin-right: calc(100% - 50px);
+    }
+
+}
