@@ -1,9 +1,9 @@
 import types from './product.types';
 
 const initial_state = {
-    results : [],
-    pending : false,
-    error: null,
+    results : {'specialProducts':[] ,'bestsellers':[] , 'resntlyProducts':[] , 'categories': [] , 'singleProduct':{images: [{}]} , 'listProducts':[]},
+    pending : true,
+    error: {},
 
 }
 
@@ -19,8 +19,9 @@ const productReducer = (state = initial_state , {type , payload}) => {
         case types.GET_PRODUCT_SUCCESS :
             return {
                 ...state ,
+                results: {...state.results , [payload.categoryId]: payload.data},
                 pending : false,
-                results: payload.results,
+                error: state.error
             }
 
         case types.GET_PRODUCT_ERROR :

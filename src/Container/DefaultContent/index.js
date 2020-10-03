@@ -1,21 +1,26 @@
-import React from 'react';
+import React,{useState , useEffect} from 'react';
 import CategoriesSliderHome from '../../Views/CategoriesSliderHome/CategoriesSliderHome';
 import HomeSlider from '../../Views/HomeSlider/HomeSlider';
 import SpecialProductSlider from '../../Views/SpecialProductSlider/SpecialProductSlider';
 import SupermarketBanner from '../../Views/SupermarketBanner/SupermarketBanner';
-import {getProducts} from '../../redux/reducers/product/product.thunk';
-import {connect} from 'react-redux';
+// import {getProducts} from '../../redux/reducers/product/product.thunk';
+// import {connect} from 'react-redux';
 import BestsellersSliderHome from '../../Views/BestsellersSliderHome/BestsellersSliderHome';
 import ResentlyProducts from '../../Views/ResentlyProducts/ResentlyProducts';
 
 import './Content.scss';
 
-const DefaultContent = ({props , getProducts}) => {
+const DefaultContent = () => {
     
+//   useEffect(() => {
+//     getProducts(faction, property, categoryId);
+//     // console.log(bestsellers)
+// }, [])
+
     return (
       <div>
         <HomeSlider/>
-        <SpecialProductSlider getProducts={()=>getProducts()}/>
+        <SpecialProductSlider  />
         <SupermarketBanner/>
         <BestsellersSliderHome/>
         <CategoriesSliderHome/>
@@ -24,4 +29,4 @@ const DefaultContent = ({props , getProducts}) => {
     );
 }
 
-export default connect(null , {getProducts})(DefaultContent);
+export default DefaultContent;

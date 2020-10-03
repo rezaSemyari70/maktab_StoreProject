@@ -1,12 +1,13 @@
 import React from 'react';
 import {Row, Col} from 'reactstrap';
-import bannerPic from '../../assets/images/supermarketBanner.png';
+import {Link} from 'react-router-dom' ;
 
 import './SupermarketBanner.scss';
 
 function SupermarketBanner() {
     return (
         <Row className="bg-warning mx-5 p-3 mt-4 contentSupermarketBanner">
+        <Link to ={`/CategoryProductsPage/81`}>
             <Col>
                 <Row className="d-flex justify-content-center align-self-center">
                     <span className="titleSupermarketBanner">
@@ -16,6 +17,7 @@ function SupermarketBanner() {
                 </Row>
                 
             </Col>
+            </Link>
         </Row>
     )
 }

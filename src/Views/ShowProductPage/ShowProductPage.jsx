@@ -15,4 +15,4 @@ function ShowProductPage() {
     )
 }
 
-export default ShowProductPage
+export default ShowProductPage;

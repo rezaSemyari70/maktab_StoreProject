@@ -10,31 +10,21 @@ import './ProductInfo.scss';
 function ProductInfo() {
 
     const {id} = useParams();
-    console.log(id)
 
-    const [singleProduct,
-        setSingleProduct] = useState({images: [{}]})
-    const [pending,
-        setPending] = useState(true)
-    console.log(singleProduct)
+    const [singleProduct, setSingleProduct] = useState({images: [{}]})
+    const [pending, setPending] = useState(true)
+
     useEffect(() => {
-        api
-            .get(`products/${id}`)
-            .then(res => {
+        api.get(`products/${id}`).then(res => {
                 setSingleProduct(res.data)
                 setPending(false)
             })
             .catch(error => console.log(error))
     }, [])
 
-    const items = singleProduct
-        .images
-        .map(item => {
+    const items = singleProduct.images.map(item => {
             return ({src: item.src, id: item.id});
-        })
-    console.log(items)
-
-        
+    })
 
     return (
         <div>
@@ -47,4 +37,4 @@ function ProductInfo() {
     )
 }
 
-export default ProductInfo
+export default ProductInfo;

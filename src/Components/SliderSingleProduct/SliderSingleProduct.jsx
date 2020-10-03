@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import {Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption} from 'reactstrap';
+import React, {useState} from 'react';
+import {Carousel, CarouselItem, CarouselControl} from 'reactstrap';
 import {Col, Row} from 'reactstrap';
 
 const SliderSingleProduct = ({items}) => {
@@ -32,10 +32,10 @@ const SliderSingleProduct = ({items}) => {
         return (
             <CarouselItem
             className="justify-content-center"
-                key={item.id}
+            key={item.id}
                 onExiting={() => setAnimating(true)}
                 onExited={() => setAnimating(false)}>
-                <img src={item.src} alt="product_picture"/>
+                <img key={item.id} src={item.src} alt="product_picture"/>
             </CarouselItem>
         );
     });
@@ -59,7 +59,6 @@ const SliderSingleProduct = ({items}) => {
                     <CarouselControl direction="next" directionText="Next" onClickHandler={next}/>
                 </Carousel>
             </Col>
-
         </Row>
     );
 }

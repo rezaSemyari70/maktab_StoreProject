@@ -4,35 +4,32 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import {Card, Col, Row} from 'reactstrap';
 import img from '../../assets/images/bestSellersbanner.png';
-import api from '../../Api/api';
+import { connect, useSelector } from 'react-redux';
+import {getProducts} from '../../redux/reducers/product/product.thunk';
 import CardProduct from '../../Components/CardProduct/CardProduct';
 import {Link} from 'react-router-dom';
 import Spinner from '../../Components/Spinner/Spinner';
+import {bestsellers , pending} from '../../redux/reducers/product/product.selectors';
+import {createStructuredSelector} from 'reselect';
 
-function BestsellersSliderHome() {
+function BestsellersSliderHome({getProducts , bestsellers , pending}) {
 
-    const [bestsellers, setBestsellers] = useState([])
-    const [pending, setPending] = useState(true)
-    console.log(bestsellers)
+    const [property, setProperty] = useState({on_sale:true});
+    const [faction, setFaction] = useState('products');
+    const [categoryId, setCategoryId] = useState('bestsellers');
+
     useEffect(() => {
-        api.get("products" ,{on_sale:true , per_page: 50}).then(res => {
-            setBestsellers(res.data)
-                setPending(false)
-            })
-            .catch(error => console.log(error))
-    }, []);
+        getProducts(faction, property, categoryId);
+    }, [])
 
     return (
-        <Row
-            style={{
-            direction: "ltr"
-        }}
+        <Row style={{direction: "ltr"}}
             className="bg-primary mt-5 pt-3 contentSpecialCarousel">
             { pending ? <Spinner/> :<Col>
 
                 <Row className='d-flex containerOwlCarousel flex-nowrap order mr-3'>
                     <Col className="d-block specialboxBanner order-1 mt-5 ">
-                        <img className="imageBanner" src={img} alt=""/> {/* <button>مشاهده همه محصولات</button> */}
+                        <img className="imageBanner" src={img} alt=""/> 
                     </Col>
                     <OwlCarousel
                         className="owl-theme ml-4"
@@ -45,11 +42,13 @@ function BestsellersSliderHome() {
                         dots={false}
                         nav>
 
-                        {bestsellers.map(item => (
+                        {
+                        categoryId === 'bestsellers' ?
+                        bestsellers[categoryId].map(item => (
                             <Card key={item.id} className="specialProductCard">
                                 <Link to={`ShowProductPage/${item.id}`}><CardProduct item={item}/></Link>
                             </Card>
-                        ))}
+                        )): <div></div>}
                     </OwlCarousel>
                 </Row>
             </Col>}
@@ -57,4 +56,10 @@ function BestsellersSliderHome() {
     )
 }
 
-export default BestsellersSliderHome;
+
+const mapStateToProps = createStructuredSelector({
+    bestsellers,
+    pending
+})
+
+export default connect(mapStateToProps , {getProducts})(BestsellersSliderHome);

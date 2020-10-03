@@ -5,7 +5,7 @@ import {Row, Col} from 'reactstrap';
 
 function ContentInfo({singleProduct}) {
 
-
+console.log(singleProduct)
     const makeMarkup = (singleProduct) => ({__html:singleProduct.description});
     return (
         <Row className="mt-5 mx-4 ProductInfoBox">

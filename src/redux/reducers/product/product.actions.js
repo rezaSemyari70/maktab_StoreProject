@@ -6,10 +6,10 @@ export const getProductsStart = () => (
     }
 )
 
-export const getProductSuccess = (data) => (
+export const getProductSuccess = (data , categoryId) => (
     {
         type : types.GET_PRODUCT_SUCCESS,
-        payload : data
+        payload : {data , categoryId}
     }
 )
 

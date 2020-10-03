@@ -4,7 +4,7 @@ import {Row, Col, Container} from 'reactstrap';
 import CardProduct from '../CardProduct/CardProduct';
 import './ListOfProducts.scss';
 
-function ListOfProducts({listProducts}) {
+function ListOfProducts({listProducts , categoryId}) {
     return (
         <Container fluid style={{
             overflowX: 'hidden'
@@ -21,10 +21,11 @@ function ListOfProducts({listProducts}) {
                     <Row style={{
                         direction: 'ltr'
                     }}>
-                        {listProducts.map(item => 
+                        {categoryId === "listProducts" ?
+                        listProducts[categoryId].map(item => 
                             (<Col xs={12} sm={6} lg={4} className="p-0" key={item.id}>
                                 <Link to={`/ShowProductPage/${item.id}`}><CardProduct item={item}/></Link>
-                            </Col>))}
+                            </Col>)) : <div></div>}
                     </Row>
                 </Col>
             </Row>

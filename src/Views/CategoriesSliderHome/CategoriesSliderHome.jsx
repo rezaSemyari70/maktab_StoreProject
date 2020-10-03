@@ -5,21 +5,21 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import {Col, Row} from 'reactstrap';
 import {Link} from 'react-router-dom';
 import api from '../../Api/api';
-
+import {connect} from 'react-redux';
+import {getProducts} from '../../redux/reducers/product/product.thunk';
+import {categories , pending} from '../../redux/reducers/product/product.selectors';
+import {createStructuredSelector} from 'reselect';
 import './CategoriesSliderHome.scss';
 
 
-function CategoriesSliderHome() {
+function CategoriesSliderHome({getProducts , categories , pending}) {
 
-    const [categories, setCategories] = useState([]);
-    const [pending, setPending] = useState(true);
+    const [property, setProperty] = useState({per_page:20});
+    const [faction, setFaction] = useState('products/categories');
+    const [categoryId, setCategoryId] = useState('categories');
 
     useEffect(() => {
-        api.get(`products/categories/`).then(res => {
-                setCategories(res.data)
-                setPending(false)
-            })
-            .catch(error => console.log(error))
+        getProducts(faction, property, categoryId);
     }, []);
 
     return (
@@ -43,7 +43,8 @@ function CategoriesSliderHome() {
                         dots={false}
                         nav>
 
-                        {categories.map(category => (
+                        {categoryId === 'categories' ?
+                            categories[categoryId].map(category => (
                             <Row key={category.id}>
                                 <Col>
                                     <Link to ={`/CategoryProductsPage/${category.id}`}>
@@ -58,7 +59,7 @@ function CategoriesSliderHome() {
                                     </Row>
                                 </Col>
                             </Row>
-                        ))}
+                        )): <div></div>}
                     </OwlCarousel>
                 </Row>
             </Col>
@@ -66,4 +67,9 @@ function CategoriesSliderHome() {
     )
 }
 
-export default CategoriesSliderHome;
+const mapStateToProps = createStructuredSelector({
+    categories,
+    pending
+})
+
+export default connect(mapStateToProps , {getProducts})(CategoriesSliderHome);

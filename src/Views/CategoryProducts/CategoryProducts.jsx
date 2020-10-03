@@ -4,32 +4,20 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faList} from '@fortawesome/free-solid-svg-icons';
 import iconHome from '../../assets/images/Home-icon.svg'
 import {Link} from "react-router-dom";
-import api from '../../Api/api';
+import {connect} from 'react-redux';
+import {getProducts} from '../../redux/reducers/product/product.thunk';
+import {categories , pending} from '../../redux/reducers/product/product.selectors';
+import {createStructuredSelector} from 'reselect';
 import './CategoryProducts.scss';
 
-function CategoryProducts() {
+function CategoryProducts({getProducts , categories , pending}) {
 
-    const [categories,
-        setCategories] = useState([]);
-    const [pending,
-        setPending] = useState(true);
-
+    const [property, setProperty] = useState({per_page:10});
+    const [faction, setFaction] = useState('products/categories');
+    const [categoryId, setCategoryId] = useState('categories');
+    
     useEffect(() => {
-        api
-            .get("products/categories", {
-            per_page: 10, // 20 products per page
-        })
-            .then(res => {
-                setCategories(res.data);
-                console.log(res.data);
-                setPending(false);
-            })
-            .catch((error) => {
-                // Invalid request, for 4xx and 5xx statuses
-                console.log("Response Status:", error.response.status);
-                console.log("Response Headers:", error.response.headers);
-                console.log("Response Data:", error.response.data);
-            });
+        getProducts(faction, property, categoryId);
     }, [])
 
     return (
@@ -44,14 +32,16 @@ function CategoryProducts() {
                         <Link to="/AllCategoriesPage" className="p-0 text-dark">دسته‌بندی محصولات</Link>
                     </button>
                     <div className="dropdown-content">
-                        {/* <div className="header">
-                            <h3>Mega Menu</h3>
-                        </div> */}
                         <Row className="row">
                             <Col className="column p-0 m-0">
-                                {categories.map(item => <ListGroup key={item.id}>
-                                    <ListGroupItem className="listItem" tag="a" href="#">{item.name}</ListGroupItem>
-                                </ListGroup>)}
+
+                                {categoryId === 'categories' ?
+                                categories[categoryId].map(item => (
+                                    <ListGroup key={item.id}>
+                                        <ListGroupItem className="listItem" tag="a" href="#">{item.name}</ListGroupItem>
+                                    </ListGroup>
+                                )):<div></div>}
+
                             </Col>
                         </Row>
                     </div>
@@ -61,4 +51,9 @@ function CategoryProducts() {
     )
 }
 
-export default CategoryProducts;
+const mapStateToProps = createStructuredSelector({
+    categories,
+    pending
+})
+
+export default connect(mapStateToProps , {getProducts})(CategoryProducts);
