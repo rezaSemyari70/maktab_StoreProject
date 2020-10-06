@@ -19,3 +19,21 @@ export const getProductError = (error) => (
         payload : error
     }
 )
+
+
+// --------------  Basket Card -----------------
+//----------------------------------------------
+
+export const addProduct = (product) => (
+    {
+        type : types.ADD_PRODUCT,
+        payload : product
+    }
+)
+
+export const deleteProduct = (product) => (
+    {
+        type : types.DELETE_PRODUCT,
+        payload : product
+    }
+)

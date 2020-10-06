@@ -1,0 +1,32 @@
+.purchaseImageBox{
+    max-width: 120px !important;
+    max-height: 120px !important;
+}
+.purchaseImage{
+    width: 80% !important;
+    max-height: auto !important;
+}
+
+#deleteProduct , #increaseCount , #decreaseCount {
+    cursor: pointer !important;
+    color: rgb(165, 165, 165) !important;
+}
+#deleteProduct:hover ,#decreaseCount:hover{
+    color: rgb(209, 3, 3) !important;
+}
+
+#increaseCount:hover{
+    color: darkgreen !important;
+}
+
+
+#productPrice{
+    margin-bottom: 0px !important;
+    margin-right: 10px !important;
+}
+
+.borderActions{
+    max-width: 100px !important;
+    background-color: rgb(221, 221, 221) !important;
+    border-radius: 20px !important;
+}

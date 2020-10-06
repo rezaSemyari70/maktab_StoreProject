@@ -7,3 +7,5 @@ export const singleProduct = state => state.product.results;
 
 export const pending = state => state.product.pending;
 
+
+

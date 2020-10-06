@@ -40,3 +40,5 @@ yarn-error.log*
 /css/ProductInfo.css.map
 /css/RelatedProducts.css.map
 /css/Spinner.css.map
+/css/FormRegister.css.map
+/css/ShoppingBasket.css.map

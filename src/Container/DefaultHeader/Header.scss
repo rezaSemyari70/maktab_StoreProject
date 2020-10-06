@@ -1,14 +1,17 @@
 @mixin contentFlex {
     display: flex !important;
-    justify-content: center !important;
+    justify-content: flex-end !important;
     align-items: center !important;
 }
 
 .topHeader {
     height: 120px !important;
     width: 100vw !important;
+    display: flex !important;
+    justify-content: space-between;
     align-items: center !important;
-    position: relative !important;
+    
+    // position: relative !important;
 }
 @media (min-width: 767.98px) {
     .topHeader {
@@ -41,9 +44,13 @@
     transform: rotate(90deg);
 }
 
+.acoutBtn{
+    width: 300px !important;
+}
+
 .shoppingBasket {
     @include contentFlex();
-    justify-content: flex-end !important;
+    // justify-content: flex-end !important;
 
 }
 
@@ -227,7 +234,7 @@ header {
 
 .shoppingBasket {
     @include contentFlex();
-    justify-content: flex-end !important;
+    // justify-content: flex-end !important;
 
 }
 

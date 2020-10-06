@@ -1,8 +1,9 @@
 .topHeader {
   height: 120px !important;
   width: 100vw !important;
+  display: flex !important;
+  justify-content: space-between;
   align-items: center !important;
-  position: relative !important;
 }
 
 @media (min-width: 767.98px) {
@@ -13,7 +14,7 @@
 
 .menuBox {
   display: flex !important;
-  justify-content: center !important;
+  justify-content: flex-end !important;
   align-items: center !important;
 }
 
@@ -26,7 +27,7 @@
 
 .searchBox {
   display: flex !important;
-  justify-content: center !important;
+  justify-content: flex-end !important;
   align-items: center !important;
   padding: none !important;
 }
@@ -40,16 +41,19 @@
   transform: rotate(90deg);
 }
 
+.acoutBtn {
+  width: 300px !important;
+}
+
 .shoppingBasket {
   display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
   justify-content: flex-end !important;
+  align-items: center !important;
 }
 
 .contentCenter {
   display: flex !important;
-  justify-content: center !important;
+  justify-content: flex-end !important;
   align-items: center !important;
   justify-content: flex-start !important;
 }
@@ -222,7 +226,6 @@ header {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  justify-content: flex-end !important;
 }
 
 .contentCenter {

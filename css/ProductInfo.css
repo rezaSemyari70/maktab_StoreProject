@@ -30,6 +30,14 @@
   height: 100% !important;
 }
 
+.purchase-Btn {
+  min-width: 50% !important;
+  min-height: 50px !important;
+  background-color: #e72b60 !important;
+  border: none !important;
+  font-weight: bolder !important;
+}
+
 .describStyle {
   line-height: 40px !important;
 }
