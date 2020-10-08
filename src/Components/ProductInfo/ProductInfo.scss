@@ -17,24 +17,28 @@
 }
 
 .bgNameProduct{
-    background-color: dodgerblue;;
-    color: white !important;
+    // background-color: dodgerblue;;
+    border-radius: 4px !important;
+    background-image: linear-gradient(to right, #8240da , #4e2780);    color: white !important;
     @extend .titleSubject;
 }
 
 .titleDescribtion{
     @extend .titleSubject;
-    background-color: rgb(170, 170, 170) !important;
+    // background-color: rgb(170, 170, 170) !important;
+    background-image: linear-gradient(to right, rgb(170, 170, 170) , rgb(102, 102, 102));    color: white !important;
+    border-radius: 4px !important;
+
 }
 
 .bgGray{
-    border:1px solid white !important;
+    // border:0.5px solid rgb(219, 219, 219) !important;
     height: 100% !important;
 }
 
-// .bgPrice{
-//     background-color: yellowgreen !important;
-// }
+.bgPrice{
+    border:1px solid rgb(219, 219, 219) !important;
+}
 
 .purchase-Btn{
     min-width: 50% !important; 
@@ -42,6 +46,7 @@
     background-color: #e72b60 !important;
     border: none !important;
     font-weight: bolder !important;
+    margin-bottom: 100px !important;
 }
 
 .describStyle{
@@ -53,6 +58,8 @@
     align-items: center !important;
     height: 50px !important;
     background-color: rgba(214, 214, 214, 0.116) !important;
+    border-radius: 5px;
+    margin: 5px 0px !important;
 }
 
 .describeTitle{

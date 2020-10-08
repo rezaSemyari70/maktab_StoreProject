@@ -41,11 +41,11 @@ const SliderSingleProduct = ({items}) => {
     });
 
     return (
-        <Row className="justify-content-center">
+        <Row className="justify-content-center marginTopPage">
             {/* <Col></Col> */}
             <Col xs={10}>
                 <Carousel
-                    className="carouselBox"
+                    className="mt-5 carouselBox"
                     activeIndex={activeIndex}
                     next={next}
                     previous={previous}>

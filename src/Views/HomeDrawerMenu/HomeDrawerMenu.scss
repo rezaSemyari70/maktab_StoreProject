@@ -1,0 +1,121 @@
+@font-face {
+    font-family: Shabnam;
+    src: url('../../fonts/Shabnam.eot');
+    src: url('../../fonts/Shabnam.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/Shabnam.woff2') format('woff2'),
+         url('../../fonts/Shabnam.woff') format('woff'),
+         url('../../fonts/Shabnam.ttf') format('truetype');
+    font-weight: normal;
+  }
+
+  .menuBox a{
+    font-family: 'Shabnam', sans-serif !important;
+  }
+
+
+  .iconHeader{
+      color: white !important;
+  }
+
+  .iconHeader:hover{
+    transform: scale(1.5) !important;
+    color: rgb(173, 173, 173) !important;
+  }
+
+
+  // --------- Drawer Menu ----------------
+//----------------------------------------
+
+/* drawer menu pane - note the 0px width */
+#drawer {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100%;
+    width: 200px;
+    background: rgba(141, 10, 124, 0.877) !important;
+    overflow-x: hidden;
+    // overflow-y: scroll; 
+    padding: 20px;
+    -webkit-overflow-scrolling: touch;
+    z-index: 100000;
+    /* adds animation for all transitions */
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+}
+
+/* checked styles (menu open state) */
+#drawer-toggle:checked ~ #drawer-toggle-label {
+    height: 100%;
+    width: calc(100% );
+    background: rgba(255, 255, 255, 0.438);
+}
+#drawer-toggle:checked ~ #drawer-toggle-label,
+#drawer-toggle:checked ~ header {
+    right: 0;
+}
+#drawer-toggle:checked ~ #drawer {
+    right: 0;
+}
+#drawer-toggle:checked ~ #page-content {
+    margin-right: 200px;
+}
+
+/* Menu item styles */
+#drawer li{
+    list-style-type: none !important;
+    display: flex !important;
+    justify-content: start !important;
+    margin:20px 0px !important;
+}
+
+#drawer li a , #drawer span{
+    color: white;
+}
+
+#drawer li a:hover , #drawer span:hover{
+    color: rgb(252, 237, 153);
+}
+
+ul li a {
+    display: block;
+    color: #c7c7c7;
+    text-decoration: none !important;
+    text-align: start !important;
+}
+
+#drawer a{
+    margin-right: 10px !important;
+    font-size: 14px !important;
+    color: rgb(49, 49, 49);
+    font-weight: bold !important;
+}
+#drawer ul a:hover {
+    color: white;
+}
+
+
+
+/* Responsive MQ */
+@media all and (max-width:350px) {
+    #drawer-toggle:checked ~ #drawer-toggle-label {
+        height: 100%;
+        width: 50px;
+    }
+    #drawer-toggle:checked ~ #drawer-toggle-label,
+    #drawer-toggle:checked ~ header {
+        right: calc(100% - 50px);
+    }
+    #drawer-toggle:checked ~ #drawer {
+        width: calc(100% - 50px);
+        padding: 20px;
+    }
+    #drawer-toggle:checked ~ #page-content {
+        margin-right: calc(100% - 50px);
+    }
+
+}
+
+

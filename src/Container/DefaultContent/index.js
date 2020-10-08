@@ -12,18 +12,13 @@ import './Content.scss';
 
 const DefaultContent = () => {
     
-//   useEffect(() => {
-//     getProducts(faction, property, categoryId);
-//     // console.log(bestsellers)
-// }, [])
-
     return (
-      <div>
+      <div className="marginTopPage">
         <HomeSlider/>
+        <CategoriesSliderHome/>
         <SpecialProductSlider  />
         <SupermarketBanner/>
         <BestsellersSliderHome/>
-        <CategoriesSliderHome/>
         <ResentlyProducts/>
       </div>
     );

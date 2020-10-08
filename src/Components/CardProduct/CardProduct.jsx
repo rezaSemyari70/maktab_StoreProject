@@ -19,8 +19,8 @@ function CardProduct({item}) {
                                 <span>۳۰%</span>
                             </Badge>
                         </Row>
-                        <Row>
-                            <p>{item.price}</p>
+                        <Row className="justify-content-center">
+                            <p>{item.price} تومان</p>
                         </Row>
                     </Col>
                 </Row>

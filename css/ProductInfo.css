@@ -17,17 +17,23 @@
 }
 
 .bgNameProduct {
-  background-color: dodgerblue;
+  border-radius: 4px !important;
+  background-image: linear-gradient(to right, #8240da, #4e2780);
   color: white !important;
 }
 
 .titleDescribtion {
-  background-color: #aaaaaa !important;
+  background-image: linear-gradient(to right, #aaaaaa, #666666);
+  color: white !important;
+  border-radius: 4px !important;
 }
 
 .bgGray {
-  border: 1px solid white !important;
   height: 100% !important;
+}
+
+.bgPrice {
+  border: 1px solid #dbdbdb !important;
 }
 
 .purchase-Btn {
@@ -36,6 +42,7 @@
   background-color: #e72b60 !important;
   border: none !important;
   font-weight: bolder !important;
+  margin-bottom: 100px !important;
 }
 
 .describStyle {
@@ -47,6 +54,8 @@
   align-items: center !important;
   height: 50px !important;
   background-color: rgba(214, 214, 214, 0.116) !important;
+  border-radius: 5px;
+  margin: 5px 0px !important;
 }
 
 .describeTitle {

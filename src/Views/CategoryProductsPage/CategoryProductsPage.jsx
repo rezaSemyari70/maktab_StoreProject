@@ -22,7 +22,7 @@ function CategoryProductsPage({getProducts , listProducts , pending}) {
     }, [])
 
     return (
-        <div>
+        <div >
             <Header/>
             <ListOfProducts listProducts={listProducts} categoryId={categoryId}/>
             <Footer/>

@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Shabnam;
+    src: url('../../fonts/Shabnam.eot');
+    src: url('../../fonts/Shabnam.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/Shabnam.woff2') format('woff2'),
+         url('../../fonts/Shabnam.woff') format('woff'),
+         url('../../fonts/Shabnam.ttf') format('truetype');
+    font-weight: normal;
+  }
+
 @mixin contentFlex {
     display: flex !important;
     justify-content: center !important;
@@ -6,10 +16,12 @@
 
 * {
     box-sizing: border-box;
+    font-family: 'Shabnam', sans-serif !important;
 }
 
 body {
     margin: 0;
+    font-family: 'Shabnam', sans-serif !important;
 }
 
 .navbar {
@@ -29,9 +41,25 @@ body {
 }
 
 .iconHome{
-    cursor: pointer;  
+    cursor: pointer; 
+    color: white !important; 
+}
+.faHome{
+    color: white !important;
+}
+.btn-outline-secondary{
+    background-color: rgba(180, 1, 73, 0.836) !important;
+    border-color: rgba(180, 1, 73, 0.836) !important;
+    // box-shadow: 1px 1px 1px 1px rgb(139, 0, 0) !important;
+}
+.btn-outline-secondary:hover{
+    background-color: rgb(19, 121, 53) !important;
 }
 
+
+.itemList{
+    border-radius: 0px !important;
+}
 .dropdown {
     float: left;
     // overflow: hidden;
@@ -51,11 +79,11 @@ body {
 }
 
 .dropdown:hover {
-    // border-bottom: 2px solid rgb(0, 0, 0) !important;
     .dropdown-content {
         display: flex !important;
-        transition: width 1s !important;
-        
+        transition: width 2s !important;
+        max-height: 300px !important;
+        min-width: 70vw !important;
     }
 }
 
@@ -63,9 +91,8 @@ body {
     display: none !important;
     position: fixed !important;
     width: 100%;
-    left: 0;
-    // box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    right:  40;
+    z-index: 10000;
 }
 
 .dropdown-content .header {
@@ -108,6 +135,9 @@ body {
 
 .listItem {
     @include contentFlex();
+    border-radius: 0px !important;
+    opacity: 0.8;
+    font-size: 16px !important;
 }
 
 /* Clear floats after the columns */

@@ -26,7 +26,7 @@ function SpecialProductSlider({ getProducts , specialProducts , pending}) {
 
     return (
         <Row style={{direction: "ltr"}}
-            className="bg-danger mt-5 pt-3 contentSpecialCarousel">
+            className="mt-5 pt-3 contentSpecialCarousel">
 
             {pending ? <Spinner /> :
                 <Col>
@@ -48,7 +48,7 @@ function SpecialProductSlider({ getProducts , specialProducts , pending}) {
                                 categoryId === 'specialProducts' ? 
                                 specialProducts[categoryId].map(item => (
                                     <Card key={item.id} className="specialProductCard">
-                                        <Link to={`ShowProductPage/${item.id}`}><CardProduct item={item}/></Link>
+                                        <Link className="cardLink" to={`ShowProductPage/${item.id}`}><CardProduct item={item}/></Link>
                                     </Card>
                                 )): <div></div>
                             }

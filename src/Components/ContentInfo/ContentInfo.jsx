@@ -29,7 +29,7 @@ console.log(basket)
                     </Col>
                 </Row>
                 <Row className="rowInfo ">
-                    <Col xs={5} className="d-flex align-items-center pl-0 m-0 bgGray">
+                    <Col xs={2} className="d-flex align-items-center pl-0 m-0 bgGray">
                         <Row className="align-items-center">
                             <p>رنگ
                             </p>
@@ -42,7 +42,7 @@ console.log(basket)
                     </Col>
                 </Row>
                 <Row className="rowInfo ">
-                    <Col xs={5} className="d-flex align-items-center pl-0 m-0 bgGray">
+                    <Col xs={2} className="d-flex align-items-center pl-0 m-0 bgGray">
                         <Row className="align-items-center">
                             <p>سایز
                             </p>
@@ -54,17 +54,17 @@ console.log(basket)
                         </Row>
                     </Col>
                 </Row>
-                <Row className=" rowInfo bgPrice mb-2">
-                    <Col xs={5} className="d-flex align-items-center pl-0 m-0 bgGray">
+                <Row className=" rowInfo">
+                    <Col xs={2} className="d-flex align-items-center pl-0 m-0 bgGray">
                         <Row className="align-items-center">
                             <p>قیمت
                             </p>
                         </Row>
                     </Col>
-                    <Col className="d-flex justify-content-center align-items-center pl-0 m-0 h-100 bgPrice">
+                    <Col className="d-flex justify-content-center align-items-center pl-0 m-0 h-100 bgGray">
                         <Row className="align-items-center ">
                             <p className="d-flex h-100 justify-content-center">{singleProduct.price}
-                                <span className="mr-2">ریال</span>
+                                <span className="mr-2">تومان</span>
                             </p>
                         </Row>
                         

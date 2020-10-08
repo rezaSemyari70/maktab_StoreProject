@@ -8,10 +8,6 @@ import './ShoppingBasket.scss';
 
 
 function ShoppingBasket({basket  ,  deleteProduct}) {
-    console.log(basket)
-
-
-
 
     return (
         <div>

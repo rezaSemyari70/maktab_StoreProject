@@ -7,9 +7,9 @@ import './ListOfProducts.scss';
 function ListOfProducts({listProducts , categoryId}) {
     return (
         <Container fluid style={{
-            overflowX: 'hidden'
+            overflow: 'hidden'
         }}>
-            <Row className="">
+            <Row className="mt-5 marginTopPage">
                 <Col xl="3" className="bg-white d-none d-xl-flex">
                     <Row className="justify-content-start bg-light w-100 p-0 m-0">
                         <Col className="w-75">

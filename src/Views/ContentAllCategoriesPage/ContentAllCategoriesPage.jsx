@@ -8,7 +8,7 @@ import './ContentAllCategoriesPage.scss';
 function ContentAllCategoriesPage() {
 
     return (
-        <Row>
+        <Row className="marginTopPage">
             <SidebarCategoryPage/>
             <BannerCollection/>
         </Row>

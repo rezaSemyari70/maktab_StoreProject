@@ -15,9 +15,9 @@ function BannerCollection() {
     return ( 
     <> 
         <Col>
-            <Row className="justify-content-center mx-xs-1 mx-md-5">
+            <Row className="justify-content-center mx-xs-1 mx-md-5 mt-5">
                 <Col className="">
-                    <Row className="justify-content-center BoxBanner digital-bg m-2">
+                    <Row className="justify-content-center digitalBoxBanner digital-bg m-2">
                         <Link to ={`/CategoryProductsPage/52`}>
                             <div className="digitalBanner">
                                 <img className="picCategoryBanner" src={digitalPic} alt="digital-banner-pic"/>

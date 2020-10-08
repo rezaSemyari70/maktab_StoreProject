@@ -27,13 +27,13 @@ function CategoriesSliderHome({getProducts , categories , pending}) {
             style={{
             direction: "ltr"
         }}
-            className="bg-success mt-4 pt-3 contentSpecialCarousel">
+            className="my-5 pt-3">
             <Col>
                 <Row className='d-flex containerCategoriesSlider flex-nowrap mr-4'>
                     <OwlCarousel
                         className="owl-theme ml-4"
                         items={2}
-                        margin={100}
+                        margin={60}
                         // autoplay={true}
                         autoplayTimeout={1500}
                         autoplaySpeed={true}
@@ -46,8 +46,8 @@ function CategoriesSliderHome({getProducts , categories , pending}) {
                         {categoryId === 'categories' ?
                             categories[categoryId].map(category => (
                             <Row key={category.id}>
-                                <Col>
-                                    <Link to ={`/CategoryProductsPage/${category.id}`}>
+                                <Col className="categoryItem">
+                                    <Link  to ={`/CategoryProductsPage/${category.id}`}>
                                         <Row className="justify-content-center">
                                             <img className="imgCategories" src={category.image.src} alt="pic"/>
                                         </Row>

@@ -10,6 +10,9 @@ import {
     faTag,
     faShoppingCart
 } from '@fortawesome/free-solid-svg-icons';
+import logo from "../../assets/images/logo.svg";
+
+import './HomeDrawerMenu.scss';
 
 function HomeDrawerMenu() {
     return (
@@ -19,14 +22,14 @@ function HomeDrawerMenu() {
                     <Col>
                         <input type="checkbox" id="drawer-toggle" name="drawer-toggle"/>
                         <label htmlFor="drawer-toggle" id="drawer-toggle-label"></label>
-                        <FontAwesomeIcon icon={faBars} size="lg"/>
+                        <FontAwesomeIcon  icon={faBars} size="lg"/>
                         <ul id="drawer">
                             <li>
                                 <span><FontAwesomeIcon icon={faHome} size="sm"/></span>
                                 <a href="/">خانه</a>
                             </li>
                             <li>
-                                <span><FontAwesomeIcon icon={faList} size="sm"/></span>
+                                <span><FontAwesomeIcon  icon={faList} size="sm"/></span>
                                 <a href="/AllCategoriesPage">همه دسته‌بندی‌ها</a>
                             </li>
                             <li>
@@ -35,7 +38,7 @@ function HomeDrawerMenu() {
                             </li>
                             <li>
                                 <span><FontAwesomeIcon icon={faShoppingCart} size="sm"/></span>
-                                <a href="#">سبد خرید</a>
+                                <a href="/ShoppingBasket">سبد خرید</a>
                             </li>
                             <li>
                                 <span><FontAwesomeIcon icon={faEye} size="sm"/></span>
@@ -49,9 +52,11 @@ function HomeDrawerMenu() {
                     </Col>
                 </Row>
             </Col>
-            <Col className="d-none d-md-flex align-items-center">Logo</Col>
+            <Col className="d-none d-md-flex align-items-center">
+                <img className="logo" src={logo} alt=""/>
+            </Col>
         </Row>
     )
 }
 
-export default HomeDrawerMenu
+export default HomeDrawerMenu;

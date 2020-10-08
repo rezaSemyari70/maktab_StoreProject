@@ -4,14 +4,17 @@
     align-items: center !important;
 }
 
-.topHeader {
-    height: 120px !important;
+.Header {
+    height: 140px !important;
     width: 100vw !important;
     display: flex !important;
     justify-content: space-between;
     align-items: center !important;
-    
-    // position: relative !important;
+    background-image: linear-gradient(to right , #BF1736,#e42044) !important;
+    position: fixed !important;
+    z-index: 10000000 !important;
+    top: 0px !important;
+    box-shadow: 0px 1px 5px 1px #8888888c;
 }
 @media (min-width: 767.98px) {
     .topHeader {
@@ -42,22 +45,51 @@
 .iconSearch {
     margin-left: 15px;
     transform: rotate(90deg);
+    color: white !important;
+}
+
+.logo{
+    width: 150px !important;
+    height: 50px !important;
+}
+
+.iconHome{
+    color: white !important;
 }
 
 .acoutBtn{
     width: 300px !important;
 }
 
+.textAcount{
+    text-decoration: none !important;
+    color: white !important;
+}
+
 .shoppingBasket {
     @include contentFlex();
-    // justify-content: flex-end !important;
-
 }
 
 .contentCenter {
     @include contentFlex();
     justify-content: flex-start !important;
 }
+
+.accountBtn a{
+    text-decoration: none !important;
+}
+
+.iconHeader{
+    color: white;
+    text-decoration: none!important;
+}
+
+.iconHeader:hover{
+    transform: scale(1.5);
+    color: rgb(177, 177, 177) !important;
+}
+
+
 
 /* ****Dashboard Home page**** */
 
@@ -186,9 +218,6 @@ header {
 
 }
 
-
-// --------- Drawer Menu -----
-
 @mixin contentFlex {
     display: flex !important;
     justify-content: center !important;
@@ -233,9 +262,7 @@ header {
 }
 
 .shoppingBasket {
-    @include contentFlex();
-    // justify-content: flex-end !important;
-
+    @include contentFlex();    
 }
 
 .contentCenter {
@@ -263,7 +290,7 @@ html {
 }
 
 /* gets the actual input out of the way; 
-    we're going to style the label instead */
+we're going to style the label instead */
 #drawer-toggle {
     position: absolute;
     opacity: 0;
@@ -298,86 +325,4 @@ header {
     z-index: 0;
 }
 
-/* drawer menu pane - note the 0px width */
-#drawer {
-    position: fixed;
-    top: 0;
-    right: -300px;
-    height: 100%;
-    width: 200px;
-    background: #f12a6de3;
-    overflow-x: hidden;
-    // overflow-y: scroll; 
-    padding: 20px;
-    -webkit-overflow-scrolling: touch;
-    z-index: 100000;
-    /* adds animation for all transitions */
-    transition: 0.5s ease-in-out;
-    -webkit-transition: 0.5s ease-in-out;
-    -moz-transition: 0.5s ease-in-out;
-    -o-transition: 0.5s ease-in-out;
-}
 
-/* checked styles (menu open state) */
-#drawer-toggle:checked ~ #drawer-toggle-label {
-    height: 100%;
-    width: calc(100% );
-    background: rgba(255, 255, 255, 0.438);
-}
-#drawer-toggle:checked ~ #drawer-toggle-label,
-#drawer-toggle:checked ~ header {
-    right: 0;
-}
-#drawer-toggle:checked ~ #drawer {
-    right: 0;
-}
-#drawer-toggle:checked ~ #page-content {
-    margin-right: 200px;
-}
-
-/* Menu item styles */
-#drawer li{
-    list-style-type: none !important;
-    display: flex !important;
-    justify-content: start !important;
-    margin:20px 0px !important;
-}
-
-#drawer ul a {
-    display: block;
-    padding: 10px;
-    color: #c7c7c7;
-    text-decoration: none !important;
-    text-align: start !important;
-    
-}
-
-#drawer a{
-    margin-right: 10px !important;
-    font-size: 14px !important;
-    color: rgb(49, 49, 49);
-    font-weight: bold !important;
-}
-#drawer ul a:hover {
-    color: white;
-}
-
-/* Responsive MQ */
-@media all and (max-width:350px) {
-    #drawer-toggle:checked ~ #drawer-toggle-label {
-        height: 100%;
-        width: 50px;
-    }
-    #drawer-toggle:checked ~ #drawer-toggle-label,
-    #drawer-toggle:checked ~ header {
-        right: calc(100% - 50px);
-    }
-    #drawer-toggle:checked ~ #drawer {
-        width: calc(100% - 50px);
-        padding: 20px;
-    }
-    #drawer-toggle:checked ~ #page-content {
-        margin-right: calc(100% - 50px);
-    }
-
-}

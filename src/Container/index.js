@@ -4,13 +4,14 @@ import React from 'react';
 // import Content from './DefaultContent';
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import routes from '../Constants/routes';
+import Spinner from '../Components/Spinner/Spinner';
 
 function DefaultContent() {
     return (
         <div>
             <BrowserRouter>
                 <Switch>
-                    <React.Suspense fallback={< div > loding ...</div>}>
+                    <React.Suspense fallback={< div > <Spinner/></div>}>
                         {routes.map(item => (
                             <Route
                                 key={item.name}

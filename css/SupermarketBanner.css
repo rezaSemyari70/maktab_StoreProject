@@ -1,14 +1,34 @@
 .contentSupermarketBanner {
-  max-height: 400px !important;
-  min-height: 280px !important;
+  height: 280px !important;
   border-radius: 20px;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+@media (max-width: 575.98px) {
+  .contentSupermarketBanner {
+    height: 175px !important;
+  }
 }
 
 .supermarketBannerPic {
   background-image: url("../../assets/images/supermarketBanner.png");
   background-repeat: no-repeat;
-  width: 400px !important;
+  max-width: 20% !important;
   height: 250px !important;
+}
+
+.digitalBanner {
+  width: 100% !important;
+  height: 150px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.picCategoryBanner {
+  max-width: 90% !important;
 }
 
 .lableOffSupermarket {

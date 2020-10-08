@@ -1,3 +1,7 @@
+.marginTopPage{
+    margin-top: 140px !important;
+}
+
 .categoryPicBox {
     display: flex !important;
     justify-content: flex-start !important;
@@ -5,8 +9,22 @@
     height: 50px !important;
 }
 
+.categoryPicBox:hover{
+    
+    .titleCategory{
+        color: dodgerblue !important;
+        font-weight: bolder !important;
+    }
+}
+
 .titleCategory {
     font-size: 1rem !important;
+    color: rgb(61, 61, 61) !important;
+    margin-bottom: 0px !important;
+}
+
+.linkItemCategory{
+    text-decoration: none !important;
 }
 
 .categoryPic {
@@ -18,11 +36,10 @@
 .categoryPic-health {
     height: 100% !important;
     width: auto !important;
-    // margin-right: 20px !important ;
 }
 
-.categoryPic-digital {
-    height: 20% !important;
+.categoryPic {
+    height: 50% !important;
     width: auto !important;
     margin-left: 10px !important;
 }
@@ -33,10 +50,28 @@
     margin-left: 10px !important;
 }
 
+.boxSide{
+    box-shadow: 0px 6px 5px 2px #e7e7e7;
+}
+
+.boxSide:last-child{
+    border-radius: 0px 0px 0px 25px !important;
+    
+}
+
+.boxSide:first-child{
+    border-radius: 15px 0px 0px 0px !important;
+}
+
 // ------ Banners -------
 
 .BoxBanner {
     border-radius: 30px !important;
+}
+
+.digitalBoxBanner{
+    border-radius: 30px !important;
+    box-shadow: 0px 1px 5px 2px  #c5c5c5;
 }
 
 .digitalBanner {
@@ -45,6 +80,7 @@
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    
 }
 
 .picCategoryBanner {
@@ -53,6 +89,7 @@
 
 .borderBanner {
     border-radius: 30px !important;
+    box-shadow: 0px 1px 5px 2px #c5c5c5;
 }
 
 .digital-bg {

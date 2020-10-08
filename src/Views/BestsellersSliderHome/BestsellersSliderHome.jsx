@@ -46,7 +46,7 @@ function BestsellersSliderHome({getProducts , bestsellers , pending}) {
                         categoryId === 'bestsellers' ?
                         bestsellers[categoryId].map(item => (
                             <Card key={item.id} className="specialProductCard">
-                                <Link to={`ShowProductPage/${item.id}`}><CardProduct item={item}/></Link>
+                                <Link className="cardLink" to={`ShowProductPage/${item.id}`}><CardProduct item={item}/></Link>
                             </Card>
                         )): <div></div>}
                     </OwlCarousel>

@@ -24,7 +24,7 @@ function ResentlyProducts({getProducts , resntlyProducts , pending}) {
 
     return (
         <Row style={{direction: "ltr"}}
-            className="mt-3 pt-3 contentSpecialCarousel">
+            className="mt-3 pt-3">
             <Col>
             <Row className="headerResentlyProducts">جدیدترین محصولات</Row>
                 <Row className='d-flex containerOwlCarousel fullWith order mr-3 '>
@@ -41,7 +41,7 @@ function ResentlyProducts({getProducts , resntlyProducts , pending}) {
                         {categoryId === 'resntlyProducts' ?
                         resntlyProducts[categoryId].map(item => (
                             <Card key={item.id} className="specialProductCard">
-                                <Link to={`ShowProductPage/${item.id}`}><CardProduct item={item}/></Link>
+                                <Link className="newProductCardLink" to={`ShowProductPage/${item.id}`}><CardProduct item={item}/></Link>
                             </Card> 
                         )):<div></div>}
 

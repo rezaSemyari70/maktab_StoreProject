@@ -1,9 +1,18 @@
+@font-face {
+  font-family: Shabnam;
+  src: url("../../fonts/Shabnam.eot");
+  src: url("../../fonts/Shabnam.eot?#iefix") format("embedded-opentype"), url("../../fonts/Shabnam.woff2") format("woff2"), url("../../fonts/Shabnam.woff") format("woff"), url("../../fonts/Shabnam.ttf") format("truetype");
+  font-weight: normal;
+}
+
 * {
   box-sizing: border-box;
+  font-family: 'Shabnam', sans-serif !important;
 }
 
 body {
   margin: 0;
+  font-family: 'Shabnam', sans-serif !important;
 }
 
 .navbar {
@@ -26,6 +35,24 @@ body {
 
 .iconHome {
   cursor: pointer;
+  color: white !important;
+}
+
+.faHome {
+  color: white !important;
+}
+
+.btn-outline-secondary {
+  background-color: rgba(180, 1, 73, 0.836) !important;
+  border-color: rgba(180, 1, 73, 0.836) !important;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #137935 !important;
+}
+
+.itemList {
+  border-radius: 0px !important;
 }
 
 .dropdown {
@@ -45,15 +72,17 @@ body {
 
 .dropdown:hover .dropdown-content {
   display: flex !important;
-  transition: width 1s !important;
+  transition: width 2s !important;
+  max-height: 300px !important;
+  min-width: 70vw !important;
 }
 
 .dropdown-content {
   display: none !important;
   position: fixed !important;
   width: 100%;
-  left: 0;
-  z-index: 1;
+  right: 40;
+  z-index: 10000;
 }
 
 .dropdown-content .header {
@@ -100,6 +129,9 @@ body {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
+  border-radius: 0px !important;
+  opacity: 0.8;
+  font-size: 16px !important;
 }
 
 /* Clear floats after the columns */

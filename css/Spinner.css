@@ -1,6 +1,7 @@
 .contentSpinner {
   display: flex !important;
   justify-content: center !important;
+  align-items: center !important;
   background-color: rgba(104, 104, 104, 0.075) !important;
 }
 
@@ -15,7 +16,7 @@
   position: absolute;
   width: 6px;
   height: 6px;
-  background: #fff;
+  background: #2c2c2c;
   border-radius: 50%;
   animation: lds-default 1.2s linear infinite;
 }

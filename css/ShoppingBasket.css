@@ -1,11 +1,41 @@
+.purchaseBox {
+  padding-bottom: 20px !important;
+  background-color: white !important;
+  box-shadow: 1px 1px 1px 2px #ebebeb;
+  width: 70vw !important;
+  height: 180px !important;
+  border-radius: 4px !important;
+}
+
+@media (max-width: 575.98px) {
+  .purchaseBox {
+    width: 100vw !important;
+  }
+}
+
 .purchaseImageBox {
-  max-width: 120px !important;
-  max-height: 120px !important;
+  max-width: 140px !important;
+  height: auto !important;
+  padding-top: 15px !important;
 }
 
 .purchaseImage {
-  width: 80% !important;
+  width: 100% !important;
   max-height: auto !important;
+}
+
+.purchaseName a {
+  text-decoration: none !important;
+  color: #3d3d3d;
+}
+
+.purchaseName p {
+  margin-bottom: 5px !important;
+}
+
+.purchaseName a:hover {
+  font-weight: bolder !important;
+  color: forestgreen;
 }
 
 #deleteProduct, #increaseCount, #decreaseCount {
@@ -15,10 +45,12 @@
 
 #deleteProduct:hover, #decreaseCount:hover {
   color: #d10303 !important;
+  transform: scale(1.5) !important;
 }
 
 #increaseCount:hover {
   color: darkgreen !important;
+  transform: scale(1.5) !important;
 }
 
 #productPrice {
@@ -27,8 +59,19 @@
 }
 
 .borderActions {
-  max-width: 100px !important;
-  background-color: #dddddd !important;
+  height: 25px !important;
+  background-color: #f3f3f3 !important;
   border-radius: 20px !important;
+  margin-bottom: 0px !important;
+  margin-top: 10px !important;
+  box-shadow: 1px 1px 2px 1px #e7e7e7;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.titleOrders {
+  font-size: 20px !important;
+  font-weight: bolder !important;
 }
 /*# sourceMappingURL=ShoppingBasket.css.map */

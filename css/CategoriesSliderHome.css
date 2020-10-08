@@ -44,6 +44,14 @@
   padding: 20px !important;
 }
 
+.categoryItem {
+  transform: scale(0.8) !important;
+}
+
+.categoryItem:hover {
+  transform: scale(1) !important;
+}
+
 .imgCategories {
   width: 50px !important;
   height: auto !important;

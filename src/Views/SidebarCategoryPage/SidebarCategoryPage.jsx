@@ -19,15 +19,15 @@ function SidebarCategoryPage({getProducts, categories, pending}) {
 
     return (
         <>
-            <Col xs={12} sm={5} md={4} lg={3} >
+            <Col xs={12} sm={5} md={4} lg={3} className="mt-5">
                 {categoryId === 'categories'
                     ? categories[categoryId].map(category => (
-                        <Row key={category.id} className="bg-light">
+                        <Row key={category.id} className="bg-light boxSide">
                             <Col >
-                            <Link to ={`/CategoryProductsPage/${category.id}`}>
+                            <Link className="linkItemCategory" to ={`/CategoryProductsPage/${category.id}`}>
                                 <Row className="categoryPicBox mr-1">
-                                    <img className="mr-4 categoryPic-digital" src={category.image.src} alt=""/>
-                                    <h5 className="titleCategory">{category.name}</h5>
+                                    <img className="mr-4 categoryPic" src={category.image.src} alt=""/>
+                                    <h5 className="titleCategory text-decoration-none">{category.name}</h5>
                                 </Row>
                             </Link>
                             </Col>
